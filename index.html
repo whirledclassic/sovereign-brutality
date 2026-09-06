@@ -9,59 +9,37 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
-:root{
-  --bg:#050505;
-  --blood:#c4121a;
-  --hot:#ff2a33;
-  --chrome:#d7dbe2;
-  --steel:#9aa1ab;
-  --paper:#f3f1ec;
-}
+:root{--bg:#050505;--blood:#c4121a;--hot:#ff2a33;--chrome:#d7dbe2;--steel:#9aa1ab;--paper:#f3f1ec}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(180,16,24,.22), transparent 42%),
-    radial-gradient(ellipse at 80% 0%, rgba(180,16,24,.16), transparent 40%),
-    #050505;
-  color:var(--paper);
-  font-family:Inter,system-ui,sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-.wire-x{position:fixed;left:0;right:0;height:16px;z-index:50;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='16' viewBox='0 0 200 16'%3E%3Cpath d='M0 8 H200' stroke='%23999' stroke-width='1.3' fill='none'/%3E%3Cg fill='%23ccc'%3E%3Cpolygon points='25,8 21,2 29,2'/%3E%3Cpolygon points='25,8 21,14 29,14'/%3E%3Cpolygon points='75,8 71,2 79,2'/%3E%3Cpolygon points='75,8 71,14 79,14'/%3E%3Cpolygon points='125,8 121,2 129,2'/%3E%3Cpolygon points='125,8 121,14 129,14'/%3E%3Cpolygon points='175,8 171,2 179,2'/%3E%3Cpolygon points='175,8 171,14 179,14'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-x;opacity:.72}
+body{background:radial-gradient(ellipse at 20% 0%, rgba(180,16,24,.22), transparent 42%),radial-gradient(ellipse at 80% 0%, rgba(180,16,24,.16), transparent 40%),#050505;color:var(--paper);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+.wire-x{position:fixed;left:0;right:0;height:16px;z-index:50;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='16' viewBox='0 0 200 16'%3E%3Cpath d='M0 8 H200' stroke='%23999' stroke-width='1.3' fill='none'/%3E%3Cg fill='%23ccc'%3E%3Cpolygon points='25,8 21,2 29,2'/%3E%3Cpolygon points='25,8 21,14 29,14'/%3E%3Cpolygon points='75,8 71,2 79,2'/%3E%3Cpolygon points='75,8 71,14 79,14'/%3E%3Cpolygon points='125,8 121,2 129,2'/%3E%3Cpolygon points='125,8 121,14 129,14'/%3E%3Cpolygon points='175,8 171,2 179,2'/%3E%3Cpolygon points='175,8 171,14 179,14'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-x;opacity:.72;animation:wireX 18s linear infinite}
 .wire-x.t{top:0}.wire-x.b{bottom:0}
-.wire-y{position:fixed;top:0;bottom:0;width:12px;z-index:50;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='140' viewBox='0 0 12 140'%3E%3Cpath d='M6 0 V140' stroke='%23999' stroke-width='1.2' fill='none'/%3E%3Cg fill='%23ccc'%3E%3Cpolygon points='6,20 1,16 1,24'/%3E%3Cpolygon points='6,20 11,16 11,24'/%3E%3Cpolygon points='6,70 1,66 1,74'/%3E%3Cpolygon points='6,70 11,66 11,74'/%3E%3Cpolygon points='6,120 1,116 1,124'/%3E%3Cpolygon points='6,120 11,116 11,124'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-y;opacity:.5}
+.wire-y{position:fixed;top:0;bottom:0;width:12px;z-index:50;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='140' viewBox='0 0 12 140'%3E%3Cpath d='M6 0 V140' stroke='%23999' stroke-width='1.2' fill='none'/%3E%3Cg fill='%23ccc'%3E%3Cpolygon points='6,20 1,16 1,24'/%3E%3Cpolygon points='6,20 11,16 11,24'/%3E%3Cpolygon points='6,70 1,66 1,74'/%3E%3Cpolygon points='6,70 11,66 11,74'/%3E%3Cpolygon points='6,120 1,116 1,124'/%3E%3Cpolygon points='6,120 11,116 11,124'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-y;opacity:.5;animation:wireY 22s linear infinite}
 .wire-y.l{left:0}.wire-y.r{right:0}
 nav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:14px 7vw;background:linear-gradient(#000e,#0000);backdrop-filter:blur(8px)}
 .mark{font-family:"Bebas Neue",sans-serif;letter-spacing:.16em;font-size:1.12rem;color:var(--chrome)}
 .mark b{color:var(--hot);font-weight:inherit}
 nav a{color:var(--chrome);text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-left:20px;font-weight:600}
 nav a:hover{color:var(--hot)}
-.hero{
-  min-height:94vh;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  padding:36px 4vw 48px;
-  background:
-    radial-gradient(ellipse at 50% -10%, rgba(255,40,40,.18), transparent 46%),
-    linear-gradient(to bottom, #0000 60%, #050505);
-}
-.hero-logo{
-  width:min(920px, 94vw);
-  filter: drop-shadow(0 24px 50px rgba(0,0,0,.85));
-  margin-bottom:8px;
-}
-.coming{display:inline-block;border:1px solid var(--blood);color:var(--hot);letter-spacing:.28em;font-size:.68rem;padding:6px 10px;margin-bottom:10px;font-family:Oswald,sans-serif}
+.hero{min-height:94vh;display:grid;place-items:center;text-align:center;padding:36px 4vw 48px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% -10%, rgba(255,40,40,.18), transparent 46%),linear-gradient(to bottom, #0000 60%, #050505)}
+.hero::before,.hero::after{content:"";position:absolute;width:46vw;height:46vw;border-radius:50%;filter:blur(70px);pointer-events:none;animation:spot 10s ease-in-out infinite alternate}
+.hero::before{left:-8vw;top:-12vw;background:rgba(196,18,26,.28)}
+.hero::after{right:-10vw;top:-8vw;background:rgba(255,42,51,.16);animation-delay:-4s}
+@keyframes spot{from{transform:translate3d(0,0,0) scale(1);opacity:.7}to{transform:translate3d(4vw,3vw,0) scale(1.15);opacity:1}}
+.hero-logo{width:min(920px,94vw);filter:drop-shadow(0 24px 50px rgba(0,0,0,.85)) drop-shadow(0 0 28px rgba(196,18,26,.22));margin-bottom:8px;animation:logoFloat 7s ease-in-out infinite;position:relative;z-index:1}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes wireX{from{background-position:0 0}to{background-position:200px 0}}
+@keyframes wireY{from{background-position:0 0}to{background-position:0 140px}}
+.coming{display:inline-block;border:1px solid var(--blood);color:var(--hot);letter-spacing:.28em;font-size:.68rem;padding:6px 10px;margin-bottom:10px;font-family:Oswald,sans-serif;position:relative;z-index:1}
 .kicker{font-family:Oswald,sans-serif;letter-spacing:.4em;text-transform:uppercase;color:var(--chrome);font-size:.76rem;margin:6px 0 12px}
 .tag{max-width:680px;margin:0 auto 22px;color:#d5d5d5}
 .pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
 .pill{border:1px solid #3a3a3a;color:var(--chrome);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:#0008}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-block;text-decoration:none;font-family:Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:13px 20px;border:1px solid transparent;cursor:pointer;font-size:.95rem}
-.btn-red{background:linear-gradient(#e01b24,#9d0d14);color:#fff;box-shadow:0 8px 24px rgba(176,16,24,.35)}
-.btn-red:hover{background:var(--hot)}
+.btn-red{background:linear-gradient(#e01b24,#9d0d14);color:#fff;box-shadow:0 8px 24px rgba(176,16,24,.35);transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.btn-red:hover{background:var(--hot);transform:translateY(-2px);box-shadow:0 12px 28px rgba(176,16,24,.5)}
 .btn-ghost{border-color:var(--chrome);color:var(--chrome)}
 .btn-ghost:hover{background:#fff;color:#000}
 section{padding:70px 8vw}
@@ -70,17 +48,15 @@ h2 em{color:var(--hot);font-style:normal}
 .rule{width:70px;height:3px;background:linear-gradient(90deg,var(--blood),var(--chrome));margin:14px 0 26px}
 .lead{font-size:1.12rem;max-width:760px;color:#ddd}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:32px}
-.card{
-  background:linear-gradient(180deg,#161616,#0b0b0b);
-  border:1px solid #2a2a2a;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
-  padding:24px;
-}
+.card{background:linear-gradient(180deg,#161616,#0b0b0b);border:1px solid #2a2a2a;box-shadow:inset 0 1px 0 rgba(255,255,255,.05);padding:24px;transition:transform .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.45)}
 .card h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.07em;color:var(--chrome);margin:6px 0 8px}
 .num{font-family:"Bebas Neue",sans-serif;color:var(--blood);font-size:1.8rem}
 .founders{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px;margin-top:12px}
-.founder{text-align:center}
-.founder img{width:240px;height:240px;object-fit:cover;border-radius:50%;border:3px solid #8d939c;box-shadow:0 0 0 6px #111,0 18px 36px #000;margin-bottom:16px;filter:grayscale(1) contrast(1.05)}
+.founder{text-align:center;transition:transform .35s ease}
+.founder:hover{transform:translateY(-6px)}
+.founder img{width:240px;height:240px;object-fit:cover;border-radius:50%;border:3px solid #8d939c;box-shadow:0 0 0 6px #111,0 18px 36px #000;margin-bottom:16px;filter:grayscale(1) contrast(1.05);transition:box-shadow .4s ease}
+.founder:hover img{box-shadow:0 0 0 6px #111,0 0 0 8px rgba(196,18,26,.55),0 18px 36px #000}
 .founder h3{font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase}
 .role{color:var(--hot);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;margin:6px 0 10px}
 .founder p{color:#c4c4c4;max-width:340px;margin:0 auto;font-size:.92rem}
@@ -100,6 +76,7 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
 .callout{border:1px solid #3a1515;background:#120808;padding:22px 24px;max-width:760px;margin-top:28px}
 .callout strong{color:var(--hot);font-family:Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:6px}
 @media(max-width:700px){nav a{display:none}section{padding:52px 7vw}}
+@media (prefers-reduced-motion:reduce){.hero::before,.hero::after,.hero-logo,.wire-x,.wire-y{animation:none!important}.card,.founder,.btn-red{transition:none}}
 </style>
 </head>
 <body>
@@ -151,10 +128,7 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
   <h2>WHAT WE CAN <em>ACTUALLY</em> PAY</h2>
   <div class="rule"></div>
   <p class="lead">We believe people who wrestle, officiate, film, and run a show deserve money. We also know what a brand-new Rhode Island indie can afford on day one.</p>
-  <div class="callout">
-    <strong>Current honest rate</strong>
-    About $20 a match for in-ring talent when the door can support it. Same spirit for officials and crew if there is anything left after the room, insurance, and basic production. If the show cannot cover that, we say so before anyone drives in. Volunteers are how a first card happens. Paid spots come when the money is actually in the box, not when a website makes a promise.
-  </div>
+  <div class="callout"><strong>Current honest rate</strong> About $20 a match for in-ring talent when the door can support it. Same spirit for officials and crew if there is anything left after the room, insurance, and basic production. If the show cannot cover that, we say so before anyone drives in. Volunteers are how a first card happens. Paid spots come when the money is actually in the box, not when a website makes a promise.</div>
   <p class="lead" style="margin-top:22px">If funding or a sponsor shows up later, pay goes up. Until then, assume small indie. Come because you want to build something in Rhode Island — not because you think this is a high-end contract.</p>
 </section>
 <section id="founders">
@@ -163,13 +137,13 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
   <div class="rule"></div>
   <div class="founders">
     <article class="founder">
-      <img src="assets/nick.jpg" alt="Nick Jacobson"/>
+      <img src="https://i.imgur.com/TTbssNq.jpeg" alt="Nick Jacobson"/>
       <h3>Nick Jacobson</h3>
       <div class="role">Co-Founder</div>
       <p>Brand, look, and the extreme identity. Red, chrome, barbed wire. Independent wrestling without pretending we are something we are not.</p>
     </article>
     <article class="founder">
-      <img src="assets/cofounder.jpg" alt="J, Co-Founder"/>
+      <img src="https://i.imgur.com/DmewB31.jpeg" alt="J, Co-Founder"/>
       <h3>J</h3>
       <div class="role">Co-Founder • In-Ring Official</div>
       <p>Operations and the standard inside the ropes. Comes from the referee shirt. Wants people paid when the company can pay, and told the truth when it cannot.</p>

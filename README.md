@@ -14,7 +14,7 @@ The page will publish at:
 
 https://whirledclassic.github.io/sovereign-brutality/
 
-File: `index.html` — single-page landing site (barbed-wire frame, red / silver / black, founders, mission, open call).
+File: `index.html` — single-page landing site (barbed-wire frame, red / silver / black, leadership, mission, open call).
 
 ## What this is
 
@@ -24,12 +24,11 @@ Sovereign Brutality is a new independent wrestling company being stood up in Rho
 
 Wrestling is dangerous, skilled, professional work. Talent, officials, and crew deserve to be paid. This company is being built around that line — not around “we’ll see how the door does.”
 
-We want partners who treat it the same way: investors, sponsors, venues, production, medical, media, and wrestlers.
+We want partners who treat it the same way: sponsors, venues, production, medical, media, and wrestlers.
 
-## Founders
+## Leadership
 
-- **Nick Jacobson** — Co-Founder (brand / extreme identity)
-- **J** — Co-Founder and in-ring official (operations / locker-room standard)
+- **Nick Jacobson** — CEO
 
 ## Design notes
 

@@ -52,8 +52,8 @@ h2 em{color:var(--hot);font-style:normal}
 .card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.45)}
 .card h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.07em;color:var(--chrome);margin:6px 0 8px}
 .num{font-family:"Bebas Neue",sans-serif;color:var(--blood);font-size:1.8rem}
-.founders{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px;margin-top:12px}
-.founder{text-align:center;transition:transform .35s ease}
+.founders{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px;margin-top:12px;justify-items:center}
+.founder{text-align:center;transition:transform .35s ease;max-width:420px}
 .founder:hover{transform:translateY(-6px)}
 .founder img{width:240px;height:240px;object-fit:cover;border-radius:50%;border:3px solid #8d939c;box-shadow:0 0 0 6px #111,0 18px 36px #000;margin-bottom:16px;filter:grayscale(1) contrast(1.05);transition:box-shadow .4s ease}
 .founder:hover img{box-shadow:0 0 0 6px #111,0 0 0 8px rgba(196,18,26,.55),0 18px 36px #000}
@@ -87,7 +87,7 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
   <div>
     <a href="#mission">Mission</a>
     <a href="#pay">The Money</a>
-    <a href="#founders">Founders</a>
+    <a href="#leadership">Leadership</a>
     <a href="#join">Join</a>
   </div>
 </nav>
@@ -131,9 +131,9 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
   <div class="callout"><strong>Current honest rate</strong> About $20 a match for in-ring talent when the door can support it. Same spirit for officials and crew if there is anything left after the room, insurance, and basic production. If the show cannot cover that, we say so before anyone drives in. Volunteers are how a first card happens. Paid spots come when the money is actually in the box, not when a website makes a promise.</div>
   <p class="lead" style="margin-top:22px">If funding or a sponsor shows up later, pay goes up. Until then, assume small indie. Come because you want to build something in Rhode Island — not because you think this is a high-end contract.</p>
 </section>
-<section id="founders">
-  <p class="kicker">The people putting it together</p>
-  <h2>FOUNDERS</h2>
+<section id="leadership">
+  <p class="kicker">Who runs the company</p>
+  <h2>LEADERSHIP</h2>
   <div class="rule"></div>
   <div class="founders">
     <article class="founder">
@@ -141,12 +141,6 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
       <h3>Nick Jacobson</h3>
       <div class="role">CEO</div>
       <p>Runs the company. Sets the look and the extreme identity — red, chrome, barbed wire — and the direction for a small Rhode Island indie that does not pretend it is bigger than it is.</p>
-    </article>
-    <article class="founder">
-      <img src="https://i.imgur.com/DmewB31.jpeg" alt="J, Co-Founder"/>
-      <h3>J</h3>
-      <div class="role">Co-Founder • In-Ring Official</div>
-      <p>Operations and the standard inside the ropes. Comes from the referee shirt. Wants people paid when the company can pay, and told the truth when it cannot.</p>
     </article>
   </div>
 </section>
@@ -210,7 +204,7 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
     <label for="note">Anything else we should know</label>
     <textarea id="note" name="Message" rows="4" placeholder="Availability, what you can bring, links to tape / Instagram / YouTube."></textarea>
     <button class="btn btn-red" type="submit">Send to the company</button>
-    <p class="note">Goes to josh.awe99@gmail.com. The first time a form is sent, that inbox has to confirm the connection — after that it lands like a normal email.</p>
+    <p class="note">Goes to the company inbox. The first time a form is sent, that inbox has to confirm the connection — after that it lands like a normal email.</p>
   </form>
 </section>
 <footer>

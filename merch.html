@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Merch — Sovereign Brutality</title>
+<meta name="description" content="Sovereign Brutality merchandise. First drop coming. Rhode Island independent wrestling."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="site.css"/>
+</head>
+<body>
+<div class="wire-x t"></div><div class="wire-x b"></div>
+<div class="wire-y l"></div><div class="wire-y r"></div>
+<nav>
+  <a class="mark" href="index.html">SOVEREIGN <b>BRUTALITY</b></a>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="roster.html">Roster</a>
+    <a href="events.html">Events</a>
+    <a class="active" href="merch.html">Merch</a>
+    <a href="apply.html">Apply</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="coming">COMPANY STORE</div>
+  <h1>MERCH <em>DROP</em> TBA</h1>
+  <div class="rule"></div>
+  <p class="lead">Nothing is for sale until it is printed and in a box we can ship or sell at the door. When the first drop exists — shirts, the mark, maybe a throw — it will live here.</p>
+</div>
+<section>
+  <div class="grid">
+    <article class="card"><div class="num">01</div><h3>Mark tee</h3><p>The barbed-wire lockup on black. First piece when we print.</p><p class="sold" style="margin-top:12px">NOT IN STOCK</p></article>
+    <article class="card"><div class="num">02</div><h3>Event souvenir</h3><p>Tied to the inaugural card. Designed after the hall is locked so the date on it is real.</p><p class="sold" style="margin-top:12px">NOT IN STOCK</p></article>
+    <article class="card"><div class="num">03</div><h3>Night-of table</h3><p>If you are at the show, that is where the first units will actually sit.</p><p class="sold" style="margin-top:12px">SHOW ONLY</p></article>
+  </div>
+  <form id="merch-form" method="POST">
+    <input type="hidden" name="_subject" value="Sovereign Brutality — merch list"/>
+    <input type="hidden" name="_captcha" value="false"/>
+    <input type="text" name="_honey" style="display:none"/>
+    <label>Email me when the first drop is real</label>
+    <input name="Email" type="email" required placeholder="you@email.com"/>
+    <input name="Size interest" placeholder="Shirt size if you care"/>
+    <button class="btn btn-red" type="submit">Join the list</button>
+  </form>
+</section>
+<footer>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling</div>
+  <div>© 2026</div>
+</footer>
+<script>
+(function(){var f=document.getElementById("merch-form");if(!f)return;var p=["jo","sh.awe","99","@gma","il.com"];f.action="https://formsubmit.co/"+p.join("");})();
+</script>
+</body>
+</html>

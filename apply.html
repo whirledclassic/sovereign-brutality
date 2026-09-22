@@ -25,7 +25,7 @@
   <div class="coming">TALENT FILE</div>
   <h1>APPLY TO THE <em>COMPANY</em></h1>
   <div class="rule"></div>
-  <p class="lead" id="slot-banner">Everything below is what would print on your roster card. Nothing is official until it is in writing.</p>
+  <p class="lead" id="slot-banner">Fill this so we can put you on the wall if you are signed. No titles yet. You are applying as a roster member.</p>
 </div>
 <section id="terms" style="padding-top:0">
   <div class="callout"><strong>Compensation</strong> Standard night-of rate is approximately $20 per match when the door supports it. If a date cannot pay, we say so before you travel.</div>
@@ -36,25 +36,29 @@
     <input type="hidden" name="_captcha" value="false"/>
     <input type="text" name="_honey" style="display:none"/>
     <input type="hidden" id="clicked-slot" name="Clicked roster slot" value=""/>
-    <label for="slot">Roster slot you are applying to fill</label>
+    <label for="slot">Roster number</label>
     <select id="slot" name="Requested slot" required>
-      <option value="">Select a spot</option>
-      <option>Sovereign Champion</option>
-      <option>#1 Contender</option>
-      <option>Main Event</option>
-      <option>Hardcore Specialist</option>
-      <option>Tag Champion</option>
-      <option>Tag Division</option>
-      <option>High Flyer</option>
-      <option>Technician</option>
-      <option>Powerhouse</option>
-      <option>Junior Heavyweight</option>
-      <option>Opener</option>
-      <option>Prospect</option>
-      <option>Manager</option>
-      <option>Second / Valet</option>
-      <option>Wildcard</option>
-      <option>No preference / put me where I fit</option>
+      <option value="">Any open spot</option>
+      <option>Roster Member 01</option>
+      <option>Roster Member 02</option>
+      <option>Roster Member 03</option>
+      <option>Roster Member 04</option>
+      <option>Roster Member 05</option>
+      <option>Roster Member 06</option>
+      <option>Roster Member 07</option>
+      <option>Roster Member 08</option>
+      <option>Roster Member 09</option>
+      <option>Roster Member 10</option>
+      <option>Roster Member 11</option>
+      <option>Roster Member 12</option>
+      <option>Roster Member 13</option>
+      <option>Roster Member 14</option>
+      <option>Roster Member 15</option>
+      <option>Roster Member 16</option>
+      <option>Roster Member 17</option>
+      <option>Roster Member 18</option>
+      <option>Roster Member 19</option>
+      <option>Roster Member 20</option>
     </select>
     <label for="ring">Ring name</label>
     <input id="ring" name="Ring name" required placeholder="What the building calls you"/>
@@ -155,7 +159,7 @@
       opt.value=q;opt.text=q;opt.selected=true;sel.appendChild(opt);
     }
     document.getElementById("clicked-slot").value=q;
-    document.getElementById("slot-banner").textContent="Applying for: "+q+". Fill the profile so we can build your card on the wall if you are signed.";
+    document.getElementById("slot-banner").textContent="Applying for "+q+". Fill the profile so we can build your card if you are signed.";
   }
 })();
 </script>

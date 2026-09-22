@@ -63,12 +63,25 @@
     <input id="ring" name="Ring name" required placeholder="What the building calls you"/>
     <label for="legal">Legal name</label>
     <input id="legal" name="Legal name" required placeholder="Waiver / booking sheet"/>
+    <label for="gender">Gender</label>
+    <select id="gender" name="Gender" required>
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    <p class="note">Used for match booking only. See the house pairing policy below.</p>
+    <div class="callout" id="pairing">
+      <strong>In-ring pairing</strong>
+      Sovereign Brutality books men’s matches and women’s matches as separate contests. Male wrestlers work with male wrestlers. Female wrestlers work with female wrestlers. That standard applies only to wrestling — the match inside the ropes.
+      <br/><br/>
+      It does not limit who can work together outside the match. A male wrestler may have a female manager. A female wrestler may have a male manager. Commentary, referees, ring announcers, security, and crew are not split by this rule. Mixed teams at ringside are welcome. The split is strictly in-ring competition, so the card is clear and every person on the show is treated with the same professional respect.
+    </div>
     <label for="nick">Nickname / epithet</label>
     <input id="nick" name="Nickname" placeholder="The —"/>
     <label for="from">Billed from</label>
     <input id="from" name="Billed from" required placeholder="City, state — what we say on the mic"/>
     <label for="height">Height</label>
-    <input id="height" name="Height" placeholder="5'10""/>
+    <input id="height" name="Height" placeholder="5'10&quot;"/>
     <label for="weight">Weight</label>
     <input id="weight" name="Weight" placeholder="190 lbs"/>
     <label for="align">Alignment</label>
@@ -108,10 +121,12 @@
       <label><input type="checkbox" name="Applying as[]" value="Wrestler"/> Wrestler</label>
       <label><input type="checkbox" name="Applying as[]" value="Tag team"/> Tag team</label>
       <label><input type="checkbox" name="Applying as[]" value="Manager"/> Manager</label>
-      <label><input type="checkbox" name="Applying as[]" value="Second"/> Second / valet</label>
+      <label><input type="checkbox" name="Applying as[]" value="Commentary"/> Commentary</label>
       <label><input type="checkbox" name="Applying as[]" value="Referee"/> Referee</label>
-      <label><input type="checkbox" name="Applying as[]" value="Announcer"/> Announcer</label>
+      <label><input type="checkbox" name="Applying as[]" value="Announcer"/> Ring announcer</label>
+      <label><input type="checkbox" name="Applying as[]" value="Security guard"/> Security guard</label>
     </div>
+    <p class="note">Check every role you want to be considered for. Commentary is play-by-play and color at the desk. Ring announcer is the microphone in the room.</p>
     <label for="partner">Tag partner name (if any)</label>
     <input id="partner" name="Tag partner" placeholder="Leave blank if singles"/>
     <label for="exp">Experience</label>

@@ -9,8 +9,7 @@
 <link rel="stylesheet" href="site.css"/>
 <style>
 .roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:28px}
-.wcard{position:relative;background:linear-gradient(180deg,#141414 0%,#080808 100%);border:1px solid #2a2a2a;min-height:340px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.wcard:hover{transform:translateY(-6px);border-color:#c4121a;box-shadow:0 18px 40px rgba(196,18,26,.18)}
+.wcard{position:relative;background:linear-gradient(180deg,#141414 0%,#080808 100%);border:1px solid #2a2a2a;min-height:340px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column}
 .sil{height:190px;background:radial-gradient(ellipse at 50% 80%,rgba(196,18,26,.22),transparent 55%),repeating-linear-gradient(-45deg,#101010 0 10px,#0c0c0c 10px 20px);display:grid;place-items:center;position:relative}
 .sil svg{width:92px;height:92px;opacity:.28}
 .stamp{position:absolute;top:12px;left:12px;border:1px solid var(--hot);color:var(--hot);font-family:Oswald,sans-serif;letter-spacing:.22em;font-size:.62rem;padding:3px 7px;background:#000a}
@@ -25,17 +24,7 @@
 <body>
 <div class="wire-x t"></div><div class="wire-x b"></div>
 <div class="wire-y l"></div><div class="wire-y r"></div>
-<nav>
-  <a class="mark" href="index.html">SOVEREIGN <b>BRUTALITY</b></a>
-  <div class="links">
-    <a href="index.html">Home</a>
-    <a class="active" href="roster.html">Roster</a>
-    <a href="events.html">Events</a>
-    <a href="merch.html">Merch</a>
-    <a href="talent.html">Talent</a>
-    <a href="apply.html">Apply</a>
-  </div>
-</nav>
+<script src="nav.js"></script>
 <div class="page-hero">
   <div class="coming">20 SPOTS • 0 NAMES</div>
   <h1>OFFICIAL <em>ROSTER</em></h1>

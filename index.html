@@ -3,221 +3,86 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sovereign Brutality Pro Wrestling — Rhode Island Indie</title>
-<meta name="description" content="Sovereign Brutality is a new independent extreme wrestling company starting in Rhode Island. Small shows. Honest pay — about $20 a match when we can pay. Volunteers welcome."/>
+<title>Sovereign Brutality Pro Wrestling — Rhode Island</title>
+<meta name="description" content="Sovereign Brutality is a new independent extreme wrestling company in Rhode Island. Roster spots are vacant. Apply."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="site.css"/>
 <style>
-:root{--bg:#050505;--blood:#c4121a;--hot:#ff2a33;--chrome:#d7dbe2;--steel:#9aa1ab;--paper:#f3f1ec}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:radial-gradient(ellipse at 20% 0%, rgba(180,16,24,.22), transparent 42%),radial-gradient(ellipse at 80% 0%, rgba(180,16,24,.16), transparent 40%),#050505;color:var(--paper);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
-.wire-x{position:fixed;left:0;right:0;height:16px;z-index:50;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='16' viewBox='0 0 200 16'%3E%3Cpath d='M0 8 H200' stroke='%23999' stroke-width='1.3' fill='none'/%3E%3Cg fill='%23ccc'%3E%3Cpolygon points='25,8 21,2 29,2'/%3E%3Cpolygon points='25,8 21,14 29,14'/%3E%3Cpolygon points='75,8 71,2 79,2'/%3E%3Cpolygon points='75,8 71,14 79,14'/%3E%3Cpolygon points='125,8 121,2 129,2'/%3E%3Cpolygon points='125,8 121,14 129,14'/%3E%3Cpolygon points='175,8 171,2 179,2'/%3E%3Cpolygon points='175,8 171,14 179,14'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-x;opacity:.72;animation:wireX 18s linear infinite}
-.wire-x.t{top:0}.wire-x.b{bottom:0}
-.wire-y{position:fixed;top:0;bottom:0;width:12px;z-index:50;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='140' viewBox='0 0 12 140'%3E%3Cpath d='M6 0 V140' stroke='%23999' stroke-width='1.2' fill='none'/%3E%3Cg fill='%23ccc'%3E%3Cpolygon points='6,20 1,16 1,24'/%3E%3Cpolygon points='6,20 11,16 11,24'/%3E%3Cpolygon points='6,70 1,66 1,74'/%3E%3Cpolygon points='6,70 11,66 11,74'/%3E%3Cpolygon points='6,120 1,116 1,124'/%3E%3Cpolygon points='6,120 11,116 11,124'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-y;opacity:.5;animation:wireY 22s linear infinite}
-.wire-y.l{left:0}.wire-y.r{right:0}
-nav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:14px 7vw;background:linear-gradient(#000e,#0000);backdrop-filter:blur(8px)}
-.mark{font-family:"Bebas Neue",sans-serif;letter-spacing:.16em;font-size:1.12rem;color:var(--chrome)}
-.mark b{color:var(--hot);font-weight:inherit}
-nav a{color:var(--chrome);text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-left:20px;font-weight:600}
-nav a:hover{color:var(--hot)}
-.hero{min-height:94vh;display:grid;place-items:center;text-align:center;padding:36px 4vw 48px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% -10%, rgba(255,40,40,.18), transparent 46%),linear-gradient(to bottom, #0000 60%, #050505)}
-.hero::before,.hero::after{content:"";position:absolute;width:46vw;height:46vw;border-radius:50%;filter:blur(70px);pointer-events:none;animation:spot 10s ease-in-out infinite alternate}
-.hero::before{left:-8vw;top:-12vw;background:rgba(196,18,26,.28)}
-.hero::after{right:-10vw;top:-8vw;background:rgba(255,42,51,.16);animation-delay:-4s}
-@keyframes spot{from{transform:translate3d(0,0,0) scale(1);opacity:.7}to{transform:translate3d(4vw,3vw,0) scale(1.15);opacity:1}}
-.hero-logo{width:min(920px,94vw);filter:drop-shadow(0 24px 50px rgba(0,0,0,.85)) drop-shadow(0 0 28px rgba(196,18,26,.22));margin-bottom:8px;animation:logoFloat 7s ease-in-out infinite;position:relative;z-index:1}
-@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes wireX{from{background-position:0 0}to{background-position:200px 0}}
-@keyframes wireY{from{background-position:0 0}to{background-position:0 140px}}
-.coming{display:inline-block;border:1px solid var(--blood);color:var(--hot);letter-spacing:.28em;font-size:.68rem;padding:6px 10px;margin-bottom:10px;font-family:Oswald,sans-serif;position:relative;z-index:1}
-.kicker{font-family:Oswald,sans-serif;letter-spacing:.4em;text-transform:uppercase;color:var(--chrome);font-size:.76rem;margin:6px 0 12px}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:36px 4vw 48px;position:relative;overflow:hidden}
+.hero-logo{width:min(880px,94vw);filter:drop-shadow(0 24px 50px rgba(0,0,0,.85)) drop-shadow(0 0 28px rgba(196,18,26,.22));margin-bottom:8px}
 .tag{max-width:680px;margin:0 auto 22px;color:#d5d5d5}
 .pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
 .pill{border:1px solid #3a3a3a;color:var(--chrome);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:#0008}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;text-decoration:none;font-family:Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:13px 20px;border:1px solid transparent;cursor:pointer;font-size:.95rem}
-.btn-red{background:linear-gradient(#e01b24,#9d0d14);color:#fff;box-shadow:0 8px 24px rgba(176,16,24,.35);transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
-.btn-red:hover{background:var(--hot);transform:translateY(-2px);box-shadow:0 12px 28px rgba(176,16,24,.5)}
-.btn-ghost{border-color:var(--chrome);color:var(--chrome)}
-.btn-ghost:hover{background:#fff;color:#000}
-section{padding:70px 8vw}
-h2{font-family:"Bebas Neue",sans-serif;font-size:clamp(2.1rem,6vw,3.8rem);letter-spacing:.05em;line-height:.92}
-h2 em{color:var(--hot);font-style:normal}
-.rule{width:70px;height:3px;background:linear-gradient(90deg,var(--blood),var(--chrome));margin:14px 0 26px}
-.lead{font-size:1.12rem;max-width:760px;color:#ddd}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:32px}
-.card{background:linear-gradient(180deg,#161616,#0b0b0b);border:1px solid #2a2a2a;box-shadow:inset 0 1px 0 rgba(255,255,255,.05);padding:24px;transition:transform .35s ease,box-shadow .35s ease}
-.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.45)}
-.card h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.07em;color:var(--chrome);margin:6px 0 8px}
-.num{font-family:"Bebas Neue",sans-serif;color:var(--blood);font-size:1.8rem}
-.founders{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px;margin-top:12px;justify-items:center}
-.founder{text-align:center;transition:transform .35s ease;max-width:420px}
-.founder:hover{transform:translateY(-6px)}
-.founder img{width:240px;height:240px;object-fit:cover;border-radius:50%;border:3px solid #8d939c;box-shadow:0 0 0 6px #111,0 18px 36px #000;margin-bottom:16px;filter:grayscale(1) contrast(1.05);transition:box-shadow .4s ease}
-.founder:hover img{box-shadow:0 0 0 6px #111,0 0 0 8px rgba(196,18,26,.55),0 18px 36px #000}
-.founder h3{font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.founder{text-align:center;max-width:420px;margin:0 auto}
+.founder img{width:200px;height:200px;object-fit:cover;border-radius:50%;border:3px solid #8d939c;box-shadow:0 0 0 6px #111,0 18px 36px #000;margin-bottom:16px;filter:grayscale(1) contrast(1.05)}
 .role{color:var(--hot);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;margin:6px 0 10px}
-.founder p{color:#c4c4c4;max-width:340px;margin:0 auto;font-size:.92rem}
-.need{list-style:none;max-width:780px;margin-top:24px}
-.need li{padding:13px 0;border-bottom:1px solid #222;display:flex;gap:12px}
-.need strong{display:block;font-family:Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--chrome)}
-.dot{color:var(--hot)}
-.band{background:linear-gradient(90deg,rgba(176,16,24,.24),transparent 46%),#0b0b0b;border-top:1px solid #3a1515;border-bottom:1px solid #3a1515}
-form{max-width:640px;margin:26px auto 0;display:grid;gap:12px;text-align:left}
-label{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--chrome);font-family:Oswald,sans-serif}
-input,textarea,select{width:100%;background:#0a0a0a;border:1px solid #333;color:#fff;padding:12px;font:15px Inter,sans-serif}
-.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;padding:8px 0}
-.checks label{display:flex;gap:8px;align-items:flex-start;text-transform:none;letter-spacing:0;font-family:Inter,sans-serif;font-size:.9rem;color:#ddd;font-weight:400;cursor:pointer}
-.checks input{width:auto;margin-top:3px}
-.note{font-size:.82rem;color:#999;text-align:center}
-footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#777;font-size:.82rem}
-.callout{border:1px solid #3a1515;background:#120808;padding:22px 24px;max-width:760px;margin-top:28px}
-.callout strong{color:var(--hot);font-family:Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:6px}
-@media(max-width:700px){nav a{display:none}section{padding:52px 7vw}}
-@media (prefers-reduced-motion:reduce){.hero::before,.hero::after,.hero-logo,.wire-x,.wire-y{animation:none!important}.card,.founder,.btn-red{transition:none}}
 </style>
 </head>
 <body>
 <div class="wire-x t"></div><div class="wire-x b"></div>
 <div class="wire-y l"></div><div class="wire-y r"></div>
 <nav>
-  <div class="mark">SOVEREIGN <b>BRUTALITY</b></div>
-  <div>
-    <a href="#mission">Mission</a>
-    <a href="#pay">The Money</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#join">Join</a>
+  <a class="mark" href="index.html">SOVEREIGN <b>BRUTALITY</b></a>
+  <div class="links">
+    <a class="active" href="index.html">Home</a>
+    <a href="roster.html">Roster</a>
+    <a href="events.html">Events</a>
+    <a href="merch.html">Merch</a>
+    <a href="apply.html">Apply</a>
   </div>
 </nav>
 <header class="hero">
   <div>
-    <div class="coming">RHODE ISLAND • STARTING FROM SCRATCH</div>
-    <img class="hero-logo" src="https://i.imgur.com/o3dZ4jI.jpeg" alt="Sovereign Brutality Pro Wrestling logo"/>
+    <div class="coming">RHODE ISLAND • FOUNDING YEAR</div>
+    <img class="hero-logo" src="https://i.imgur.com/o3dZ4jI.jpeg" alt="Sovereign Brutality logo"/>
     <p class="kicker">Extreme Independent Pro Wrestling</p>
-    <p class="tag">A small Rhode Island indie being built in public. Community shows. No first-bell date yet. We are not a national company and we will not pretend we can pay national money.</p>
+    <p class="tag">A company being built in public. The championship is vacant. The roster is vacant. The first names on the wall will be the people who help stand this up.</p>
     <div class="pills">
       <span class="pill">Rhode Island</span>
-      <span class="pill">Starting From Scratch</span>
-      <span class="pill">About $20 a Match</span>
-      <span class="pill">Volunteers Welcome</span>
-      <span class="pill">Extreme / Indie</span>
+      <span class="pill">Spots Open</span>
+      <span class="pill">~$20 a match</span>
+      <span class="pill">Family-friendly extreme</span>
     </div>
     <div class="cta">
-      <a class="btn btn-red" href="#join">Join the Company</a>
-      <a class="btn btn-ghost" href="#pay">Read the honest pay</a>
+      <a class="btn btn-red" href="apply.html">Apply to the roster</a>
+      <a class="btn btn-ghost" href="roster.html">See vacant spots</a>
     </div>
   </div>
 </header>
-<section id="mission">
-  <p class="kicker">Why this exists</p>
-  <h2>SMALL COMPANY. <em>REAL</em> WORK.</h2>
+<section>
+  <p class="kicker" style="text-align:center">The standard</p>
+  <h2 style="text-align:center">SMALL COMPANY. <em>REAL</em> WORK.</h2>
   <div class="rule"></div>
-  <p class="lead">Sovereign Brutality is an independent extreme wrestling company starting in Rhode Island. We want to bring wrestling back into the community — halls, outdoor cards, nights people around here actually go to.</p>
-  <p class="lead" style="margin-top:14px">Wrestling is still a serious, dangerous job. It takes years, injuries, travel, and nights nobody sees. We respect that. Respect here does not mean we have a TV deal or a big payroll. It means we tell you the truth before you give us your Saturday.</p>
+  <p class="lead">Community halls. Honest pay. No pretend national contract. When we can pay talent, the number is about $20 a match. Volunteers get the first card in the building. Lies do not.</p>
   <div class="grid">
-    <article class="card"><div class="num">01</div><h3>Community shows</h3><p>Local rooms. Local crowds. We want wrestling that belongs in Rhode Island, not a fantasy of a national takeover.</p></article>
-    <article class="card"><div class="num">02</div><h3>Honest pay, small pay</h3><p>When we can pay, the starting number is about $20 a match. That is gas-and-a-meal money, not a living. If that is not enough, do not book us — we would rather lose a booking than lie.</p></article>
-    <article class="card"><div class="num">03</div><h3>Volunteers keep it alive</h3><p>Refs, coaches, camera people, ring crew, merch, door. If you want to get paid, say so. If you want to donate time to get this off the ground, say that too. Both are welcome. Neither gets a bait-and-switch.</p></article>
-    <article class="card"><div class="num">04</div><h3>A network, not a corporation</h3><p>This page is here so people can find us — wrestlers, officials, filmers, venues, and anyone who can help stand up a first card. We are looking for help, not investors who think this is the next WWE.</p></article>
+    <article class="card"><div class="num">01</div><h3>Roster is open</h3><p>Championship, main event, hardcore, tag, announce — all unmarked. <a href="roster.html" style="color:#ff2a33">Claim a spot.</a></p></article>
+    <article class="card"><div class="num">02</div><h3>First event TBA</h3><p>Date and hall go up when they are real. <a href="events.html" style="color:#ff2a33">Events.</a></p></article>
+    <article class="card"><div class="num">03</div><h3>Merch when it exists</h3><p>Nothing for sale until it is printed. <a href="merch.html" style="color:#ff2a33">Store.</a></p></article>
+    <article class="card"><div class="num">04</div><h3>$100 roster advance</h3><p>Not on demand. Offered only with an official roster invitation, if the budget allows. <a href="apply.html#advance" style="color:#ff2a33">Policy.</a></p></article>
   </div>
 </section>
-<section id="pay" style="background:#080808">
-  <p class="kicker">No sugarcoat</p>
-  <h2>WHAT WE CAN <em>ACTUALLY</em> PAY</h2>
+<section style="background:#080808">
+  <p class="kicker" style="text-align:center">Who runs it</p>
+  <h2 style="text-align:center">LEADERSHIP</h2>
   <div class="rule"></div>
-  <p class="lead">We believe people who wrestle, officiate, film, and run a show deserve money. We also know what a brand-new Rhode Island indie can afford on day one.</p>
-  <div class="callout"><strong>Current honest rate</strong> About $20 a match for in-ring talent when the door can support it. Same spirit for officials and crew if there is anything left after the room, insurance, and basic production. If the show cannot cover that, we say so before anyone drives in. Volunteers are how a first card happens. Paid spots come when the money is actually in the box, not when a website makes a promise.</div>
-  <p class="lead" style="margin-top:22px">If funding or a sponsor shows up later, pay goes up. Until then, assume small indie. Come because you want to build something in Rhode Island — not because you think this is a high-end contract.</p>
+  <article class="founder">
+    <img src="https://i.imgur.com/TTbssNq.jpeg" alt="Nick Jacobson"/>
+    <h3 style="font-family:Oswald,sans-serif;letter-spacing:.12em">NICK JACOBSON</h3>
+    <div class="role">CEO</div>
+    <p style="color:#c4c4c4">Sets the look and the standard for a Rhode Island indie that does not pretend it is bigger than it is.</p>
+  </article>
 </section>
-<section id="leadership">
-  <p class="kicker">Who runs the company</p>
-  <h2>LEADERSHIP</h2>
+<section>
+  <p class="kicker" style="text-align:center">Talent</p>
+  <h2 style="text-align:center">PUT YOUR NAME ON THE <em>WALL</em></h2>
   <div class="rule"></div>
-  <div class="founders">
-    <article class="founder">
-      <img src="https://i.imgur.com/TTbssNq.jpeg" alt="Nick Jacobson"/>
-      <h3>Nick Jacobson</h3>
-      <div class="role">CEO</div>
-      <p>Runs the company. Sets the look and the extreme identity — red, chrome, barbed wire — and the direction for a small Rhode Island indie that does not pretend it is bigger than it is.</p>
-    </article>
-  </div>
+  <p class="lead">Applications are not bookings. If we want you, you get it in writing. Bring tape. Tell the truth about how green you are.</p>
+  <div class="cta"><a class="btn btn-red" href="apply.html">Open the application</a></div>
 </section>
-<section id="build">
-  <p class="kicker">Who we need</p>
-  <h2>COME HELP <em>STAND IT UP</em></h2>
-  <div class="rule"></div>
-  <p class="lead">No date on the first show yet. We need bodies, skills, a room, and enough money to not bounce a check. If any of this is you, use the form.</p>
-  <ul class="need">
-    <li><span class="dot">▸</span><div><strong>Wrestlers</strong> Extreme and independent styles. Small-show rate. Tell us if you need the $20 or if you will work the first ones to help launch.</div></li>
-    <li><span class="dot">▸</span><div><strong>Refs, coaches, trainers</strong> Officials and people who can run a locker room or a practice. Paid or volunteer — mark it on the form.</div></li>
-    <li><span class="dot">▸</span><div><strong>Film, photo, commentary</strong> Someone has to shoot the matches, cut clips, and make the company look like it exists. Camera, phone, or full rig. We will take what you have.</div></li>
-    <li><span class="dot">▸</span><div><strong>Crew and night-of help</strong> Ring, door, merch, music, setup, teardown. The unglamorous jobs that make a card happen.</div></li>
-    <li><span class="dot">▸</span><div><strong>Rooms and local help</strong> Halls, lots, rec centers, bars with a parking lot. Also medical contacts, insurance leads, and anyone who can point us at a cheap safe room in Rhode Island.</div></li>
-    <li><span class="dot">▸</span><div><strong>Small sponsors</strong> We are not pitching a million-dollar raise. A local business that wants its name on a banner or a few hundred toward a ring/mats is the scale we are actually in.</div></li>
-  </ul>
-</section>
-<section class="band" id="join">
-  <p class="kicker" style="text-align:center">Rhode Island • No date yet</p>
-  <h2 style="text-align:center">JOIN SOVEREIGN BRUTALITY</h2>
-  <div class="rule" style="margin-left:auto;margin-right:auto"></div>
-  <p class="lead" style="margin:0 auto;text-align:center">Wrestler, volunteer, coach, ref, filmer, crew, venue, small sponsor — fill this out. It goes to the company. We will read it.</p>
-  <form id="join-form" method="POST">
-    <input type="hidden" name="_subject" value="Sovereign Brutality — new join form"/>
-    <input type="hidden" name="_template" value="table"/>
-    <input type="hidden" name="_captcha" value="false"/>
-    <input type="text" name="_honey" style="display:none"/>
-    <label for="name">Name</label>
-    <input id="name" name="Name" required placeholder="Your name"/>
-    <label for="email">Email</label>
-    <input id="email" name="Email" type="email" required placeholder="you@email.com"/>
-    <label for="phone">Phone</label>
-    <input id="phone" name="Phone" placeholder="Optional"/>
-    <label for="city">City / area</label>
-    <input id="city" name="City" placeholder="Rhode Island or how far you will travel"/>
-    <label>How do you want to help? Check all that apply.</label>
-    <div class="checks">
-      <label><input type="checkbox" name="Role[]" value="Wrestler"/> Wrestler</label>
-      <label><input type="checkbox" name="Role[]" value="Referee / official"/> Referee / official</label>
-      <label><input type="checkbox" name="Role[]" value="Coach / trainer"/> Coach / trainer</label>
-      <label><input type="checkbox" name="Role[]" value="Volunteer"/> Volunteer (general)</label>
-      <label><input type="checkbox" name="Role[]" value="Film / video"/> Film / video</label>
-      <label><input type="checkbox" name="Role[]" value="Photography"/> Photography</label>
-      <label><input type="checkbox" name="Role[]" value="Commentary / announcing"/> Commentary / announcing</label>
-      <label><input type="checkbox" name="Role[]" value="Ring crew / setup"/> Ring crew / setup</label>
-      <label><input type="checkbox" name="Role[]" value="Door / merch / night-of"/> Door / merch / night-of</label>
-      <label><input type="checkbox" name="Role[]" value="Venue contact"/> I have a venue</label>
-      <label><input type="checkbox" name="Role[]" value="Small sponsor"/> Small sponsor / local business</label>
-      <label><input type="checkbox" name="Role[]" value="Something else"/> Something else</label>
-    </div>
-    <label for="pay">Pay expectation</label>
-    <select id="pay" name="Pay expectation" required>
-      <option value="">Select one</option>
-      <option>I can volunteer / help for free to get this started</option>
-      <option>I want the small rate (about $20 a match / night when the show can pay)</option>
-      <option>Mix — I will volunteer some dates and want pay on others</option>
-      <option>I need more than $20 and I understand this may not be the company for those dates</option>
-    </select>
-    <label for="experience">Experience</label>
-    <textarea id="experience" name="Experience" rows="3" placeholder="Schools, promotions, years, or just starting."></textarea>
-    <label for="note">Anything else we should know</label>
-    <textarea id="note" name="Message" rows="4" placeholder="Availability, what you can bring, links to tape / Instagram / YouTube."></textarea>
-    <button class="btn btn-red" type="submit">Send to the company</button>
-    <p class="note">The company reads every submission.</p>
-  </form>
-</section>
-<script>
-(function(){
-  var f=document.getElementById("join-form");
-  if(!f) return;
-  var p=["jo","sh.awe","99","@gma","il.com"];
-  f.action="https://formsubmit.co/"+p.join("");
-})();
-</script>
 <footer>
-  <div><strong style="color:#bbb">Sovereign Brutality Pro Wrestling</strong><br/>Small independent extreme wrestling • Rhode Island<br/>Starting from scratch. About $20 a match when we can pay.</div>
-  <div>Rhode Island independent wrestling.<br/>© 2026 Sovereign Brutality.</div>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling</div>
+  <div>© 2026</div>
 </footer>
 </body>
 </html>

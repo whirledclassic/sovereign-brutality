@@ -18,7 +18,7 @@
     <a href="roster.html">Roster</a>
     <a href="events.html">Events</a>
     <a href="merch.html">Merch</a>
-    <a class="active" href="apply.html">Apply</a>
+    <a href="talent.html">Talent</a>
   </div>
 </nav>
 <div class="page-hero">
@@ -183,6 +183,13 @@
       <option>No — I do not want to be considered for an advance</option>
     </select>
     <p class="note">The $100 advance is only for official roster invitations. Independent bookings are not eligible for an advance.</p>
+    <label for="waiver">Would you like to print your own waiver, sign it, and bring it to the promoter?</label>
+    <select id="waiver" name="Print own waiver" required>
+      <option value="">Select</option>
+      <option>Yes — I will print, sign, and bring it</option>
+      <option>No — I will sign one from the promoter at the show</option>
+    </select>
+    <p class="note">Everyone who wrestles or officiates signs a waiver before they work. If you select no, that is fine — you still sign, you just take a copy from the promoter when you arrive, before you perform. Printing your own saves time at the door. <a href="waiver.html" target="_blank" rel="noopener" style="color:#ff2a33">Open and print the waiver</a>.</p>
     <label for="msg">Anything else</label>
     <textarea id="msg" name="Message" rows="3"></textarea>
     <button class="btn btn-red" type="submit">Submit application</button>
@@ -190,8 +197,8 @@
   </form>
 </section>
 <footer>
-  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Roster is not a contract. Free water at shows for talent and crew.</div>
-  <div><a href="roster.html" style="color:#ccc">Back to the wall</a></div>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Roster is not a contract. <a href="waiver.html" style="color:#ccc">Waiver</a></div>
+  <div><a href="talent.html" style="color:#ccc">Talent home</a></div>
 </footer>
 <script>
 (function(){

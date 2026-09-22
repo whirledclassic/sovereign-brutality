@@ -4,7 +4,6 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Apply — Sovereign Brutality Roster</title>
-<meta name="description" content="Apply to wrestle or work for Sovereign Brutality in Rhode Island. Official roster spots are open. Advance policy included."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="site.css"/>
@@ -23,62 +22,96 @@
   </div>
 </nav>
 <div class="page-hero">
-  <div class="coming">TALENT & STAFF</div>
+  <div class="coming">TALENT FILE</div>
   <h1>APPLY TO THE <em>COMPANY</em></h1>
   <div class="rule"></div>
-  <p class="lead">Use this form to be considered for a live booking or for the official roster. A booking is one night. Roster is an ongoing relationship. We answer in writing. Until then, you are not booked.</p>
+  <p class="lead" id="slot-banner">Everything below is what would print on your roster card. Nothing is official until it is in writing.</p>
 </div>
 <section id="terms" style="padding-top:0">
-  <div class="callout">
-    <strong>Compensation — read this first</strong>
-    Standard night-of talent rate is approximately $20 per match when the door supports it. That is a small independent rate. It is not a salary. If a date cannot pay, we will tell you before you travel. Volunteers are how the first card happens. Neither path is a bait-and-switch.
-  </div>
-  <div class="callout" id="advance" style="margin-top:16px">
-    <strong>Roster advance — $100</strong>
-    In limited cases, Sovereign Brutality may offer a one-time $100 roster advance to talent invited onto the official roster. That advance is not a booking fee, not match pay, and not available on request. It is considered only after the company decides it wants you on the roster, and only if the budget that month can support it. Highly sought talent are the most likely to be offered one. Selecting yes below means you would like to be considered if an invitation is extended. It does not reserve $100 and it does not create a contract. Any advance is confirmed in writing or it does not exist.
-  </div>
+  <div class="callout"><strong>Compensation</strong> Standard night-of rate is approximately $20 per match when the door supports it. If a date cannot pay, we say so before you travel.</div>
+  <div class="callout" id="advance" style="margin-top:16px"><strong>Roster advance — $100</strong> In limited cases the company may offer a one-time $100 roster advance to talent invited onto the official roster. It is not a booking fee, not match pay, and not available on request. It depends on budget. Highly sought talent are the most likely to be offered one. Selecting yes means consider me if invited. It does not reserve $100. Confirmed in writing or it does not exist.</div>
   <form id="apply-form" method="POST">
     <input type="hidden" name="_subject" value="Sovereign Brutality — roster application"/>
     <input type="hidden" name="_template" value="table"/>
     <input type="hidden" name="_captcha" value="false"/>
     <input type="text" name="_honey" style="display:none"/>
+    <input type="hidden" id="clicked-slot" name="Clicked roster slot" value=""/>
+    <label for="slot">Roster slot you are applying to fill</label>
+    <select id="slot" name="Requested slot" required>
+      <option value="">Select a spot</option>
+      <option>Sovereign Champion</option>
+      <option>#1 Contender</option>
+      <option>Main Event</option>
+      <option>Hardcore Specialist</option>
+      <option>Tag Champion</option>
+      <option>Tag Division</option>
+      <option>High Flyer</option>
+      <option>Technician</option>
+      <option>Powerhouse</option>
+      <option>Junior Heavyweight</option>
+      <option>Opener</option>
+      <option>Prospect</option>
+      <option>Manager</option>
+      <option>Second / Valet</option>
+      <option>Wildcard</option>
+      <option>No preference / put me where I fit</option>
+    </select>
     <label for="ring">Ring name</label>
-    <input id="ring" name="Ring name" required placeholder="What the building should call you"/>
+    <input id="ring" name="Ring name" required placeholder="What the building calls you"/>
     <label for="legal">Legal name</label>
-    <input id="legal" name="Legal name" required placeholder="For the waiver and booking sheet"/>
+    <input id="legal" name="Legal name" required placeholder="Waiver / booking sheet"/>
+    <label for="nick">Nickname / epithet</label>
+    <input id="nick" name="Nickname" placeholder="The —"/>
+    <label for="from">Billed from</label>
+    <input id="from" name="Billed from" required placeholder="City, state — what we say on the mic"/>
+    <label for="height">Height</label>
+    <input id="height" name="Height" placeholder="5'10""/>
+    <label for="weight">Weight</label>
+    <input id="weight" name="Weight" placeholder="190 lbs"/>
+    <label for="align">Alignment</label>
+    <select id="align" name="Alignment">
+      <option value="">Select</option>
+      <option>Face</option>
+      <option>Heel</option>
+      <option>Tween / depends</option>
+    </select>
+    <label for="style">Style</label>
+    <input id="style" name="Style" placeholder="Technical, hardcore, high-fly, comedy"/>
+    <label for="finisher">Finishing move</label>
+    <input id="finisher" name="Finisher" placeholder="Name of the move"/>
+    <label for="sig">Signature spot / trademark</label>
+    <input id="sig" name="Signature" placeholder="What the crowd will remember"/>
+    <label for="theme">Entrance idea</label>
+    <input id="theme" name="Entrance idea" placeholder="Song or the feeling"/>
+    <label for="gear">Gear colors</label>
+    <input id="gear" name="Gear colors" placeholder="Black / chrome / red"/>
+    <label for="photo">Photo or pose link</label>
+    <input id="photo" name="Photo link" placeholder="Drive, Dropbox, or Instagram"/>
+    <label for="ig">Instagram / social</label>
+    <input id="ig" name="Social" placeholder="@handle"/>
+    <label for="tape">Best match / tape</label>
+    <input id="tape" name="Tape" placeholder="One YouTube or drive link"/>
     <label for="email">Email</label>
     <input id="email" name="Email" type="email" required/>
     <label for="phone">Phone</label>
-    <input id="phone" name="Phone" required placeholder="Mobile"/>
-    <label for="city">Home base / travel radius</label>
-    <input id="city" name="City and travel" required placeholder="City, and how far you will drive"/>
+    <input id="phone" name="Phone" required/>
+    <label for="city">Home base and travel radius</label>
+    <input id="city" name="City and travel" required placeholder="Where you live, how far you drive"/>
     <label>I am applying as</label>
     <div class="checks">
       <label><input type="checkbox" name="Applying as[]" value="Wrestler"/> Wrestler</label>
       <label><input type="checkbox" name="Applying as[]" value="Tag team"/> Tag team</label>
-      <label><input type="checkbox" name="Applying as[]" value="Manager"/> Manager / mouthpiece</label>
+      <label><input type="checkbox" name="Applying as[]" value="Manager"/> Manager</label>
+      <label><input type="checkbox" name="Applying as[]" value="Second"/> Second / valet</label>
       <label><input type="checkbox" name="Applying as[]" value="Referee"/> Referee</label>
-      <label><input type="checkbox" name="Applying as[]" value="Announcer"/> Announcer / commentary</label>
-      <label><input type="checkbox" name="Applying as[]" value="Crew"/> Crew / production</label>
+      <label><input type="checkbox" name="Applying as[]" value="Announcer"/> Announcer</label>
     </div>
-    <label for="style">In-ring style (if talent)</label>
-    <input id="style" name="Style" placeholder="Technical, hardcore, comedy, high-fly — be honest"/>
-    <label for="slot">Roster slot you want considered for</label>
-    <select id="slot" name="Requested slot">
-      <option value="">No preference</option>
-      <option>Sovereign Championship picture</option>
-      <option>Main-event slot</option>
-      <option>Hardcore specialist</option>
-      <option>Tag team</option>
-      <option>Opening / undercard</option>
-      <option>Manager</option>
-      <option>Official</option>
-      <option>Announce</option>
-    </select>
-    <label for="tape">Tape / social</label>
-    <input id="tape" name="Tape and social" placeholder="YouTube, Instagram, or a drive link"/>
+    <label for="partner">Tag partner name (if any)</label>
+    <input id="partner" name="Tag partner" placeholder="Leave blank if singles"/>
     <label for="exp">Experience</label>
-    <textarea id="exp" name="Experience" rows="4" required placeholder="Schools, promotions, years. If you are green, write that."></textarea>
+    <textarea id="exp" name="Experience" rows="3" required placeholder="School, promotions, years. Green is fine if you say so."></textarea>
+    <label for="inj">Injuries or limits we should know</label>
+    <textarea id="inj" name="Injuries" rows="2" placeholder="Concussion history, no bumps on the neck, etc."></textarea>
     <label for="pay">Night-of pay expectation</label>
     <select id="pay" name="Pay expectation" required>
       <option value="">Select one</option>
@@ -93,19 +126,38 @@
       <option>Yes — if invited onto the official roster, consider me for the $100 advance</option>
       <option>No — I do not want to be considered for an advance</option>
     </select>
-    <p class="note">The $100 roster advance is discretionary, budget-dependent, and offered only with an official roster invitation. It is never paid on demand and never paid for simply submitting this form.</p>
+    <p class="note">The $100 advance is discretionary, budget-dependent, and only tied to an official roster invitation.</p>
     <label for="msg">Anything else</label>
-    <textarea id="msg" name="Message" rows="4" placeholder="Injuries we should know, partners, nights you cannot work."></textarea>
-    <button class="btn btn-red" type="submit">Submit application</button>
-    <p class="note">Goes to the company office. You will hear back only if we have a next step.</p>
+    <textarea id="msg" name="Message" rows="3"></textarea>
+    <button class="btn btn-red" type="submit">Submit application for this spot</button>
+    <p class="note">You hear back only if there is a next step.</p>
   </form>
 </section>
 <footer>
   <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Applications are not bookings.</div>
-  <div><a href="roster.html" style="color:#ccc">View vacant spots</a></div>
+  <div><a href="roster.html" style="color:#ccc">Back to the wall</a></div>
 </footer>
 <script>
-(function(){var f=document.getElementById("apply-form");if(!f)return;var p=["jo","sh.awe","99","@gma","il.com"];f.action="https://formsubmit.co/"+p.join("");})();
+(function(){
+  var f=document.getElementById("apply-form");
+  if(!f) return;
+  var p=["jo","sh.awe","99","@gma","il.com"];
+  f.action="https://formsubmit.co/"+p.join("");
+  var q=new URLSearchParams(location.search).get("slot");
+  if(q){
+    var sel=document.getElementById("slot");
+    var hit=false;
+    for(var i=0;i<sel.options.length;i++){
+      if(sel.options[i].value===q){sel.selectedIndex=i;hit=true;break;}
+    }
+    if(!hit){
+      var opt=document.createElement("option");
+      opt.value=q;opt.text=q;opt.selected=true;sel.appendChild(opt);
+    }
+    document.getElementById("clicked-slot").value=q;
+    document.getElementById("slot-banner").textContent="Applying for: "+q+". Fill the profile so we can build your card on the wall if you are signed.";
+  }
+})();
 </script>
 </body>
 </html>

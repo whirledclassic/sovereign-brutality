@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Apply — Sovereign Brutality Roster</title>
+<meta name="description" content="Apply to wrestle or work for Sovereign Brutality in Rhode Island. Official roster spots are open. Advance policy included."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="site.css"/>
+</head>
+<body>
+<div class="wire-x t"></div><div class="wire-x b"></div>
+<div class="wire-y l"></div><div class="wire-y r"></div>
+<nav>
+  <a class="mark" href="index.html">SOVEREIGN <b>BRUTALITY</b></a>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="roster.html">Roster</a>
+    <a href="events.html">Events</a>
+    <a href="merch.html">Merch</a>
+    <a class="active" href="apply.html">Apply</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="coming">TALENT & STAFF</div>
+  <h1>APPLY TO THE <em>COMPANY</em></h1>
+  <div class="rule"></div>
+  <p class="lead">Use this form to be considered for a live booking or for the official roster. A booking is one night. Roster is an ongoing relationship. We answer in writing. Until then, you are not booked.</p>
+</div>
+<section id="terms" style="padding-top:0">
+  <div class="callout">
+    <strong>Compensation — read this first</strong>
+    Standard night-of talent rate is approximately $20 per match when the door supports it. That is a small independent rate. It is not a salary. If a date cannot pay, we will tell you before you travel. Volunteers are how the first card happens. Neither path is a bait-and-switch.
+  </div>
+  <div class="callout" id="advance" style="margin-top:16px">
+    <strong>Roster advance — $100</strong>
+    In limited cases, Sovereign Brutality may offer a one-time $100 roster advance to talent invited onto the official roster. That advance is not a booking fee, not match pay, and not available on request. It is considered only after the company decides it wants you on the roster, and only if the budget that month can support it. Highly sought talent are the most likely to be offered one. Selecting yes below means you would like to be considered if an invitation is extended. It does not reserve $100 and it does not create a contract. Any advance is confirmed in writing or it does not exist.
+  </div>
+  <form id="apply-form" method="POST">
+    <input type="hidden" name="_subject" value="Sovereign Brutality — roster application"/>
+    <input type="hidden" name="_template" value="table"/>
+    <input type="hidden" name="_captcha" value="false"/>
+    <input type="text" name="_honey" style="display:none"/>
+    <label for="ring">Ring name</label>
+    <input id="ring" name="Ring name" required placeholder="What the building should call you"/>
+    <label for="legal">Legal name</label>
+    <input id="legal" name="Legal name" required placeholder="For the waiver and booking sheet"/>
+    <label for="email">Email</label>
+    <input id="email" name="Email" type="email" required/>
+    <label for="phone">Phone</label>
+    <input id="phone" name="Phone" required placeholder="Mobile"/>
+    <label for="city">Home base / travel radius</label>
+    <input id="city" name="City and travel" required placeholder="City, and how far you will drive"/>
+    <label>I am applying as</label>
+    <div class="checks">
+      <label><input type="checkbox" name="Applying as[]" value="Wrestler"/> Wrestler</label>
+      <label><input type="checkbox" name="Applying as[]" value="Tag team"/> Tag team</label>
+      <label><input type="checkbox" name="Applying as[]" value="Manager"/> Manager / mouthpiece</label>
+      <label><input type="checkbox" name="Applying as[]" value="Referee"/> Referee</label>
+      <label><input type="checkbox" name="Applying as[]" value="Announcer"/> Announcer / commentary</label>
+      <label><input type="checkbox" name="Applying as[]" value="Crew"/> Crew / production</label>
+    </div>
+    <label for="style">In-ring style (if talent)</label>
+    <input id="style" name="Style" placeholder="Technical, hardcore, comedy, high-fly — be honest"/>
+    <label for="slot">Roster slot you want considered for</label>
+    <select id="slot" name="Requested slot">
+      <option value="">No preference</option>
+      <option>Sovereign Championship picture</option>
+      <option>Main-event slot</option>
+      <option>Hardcore specialist</option>
+      <option>Tag team</option>
+      <option>Opening / undercard</option>
+      <option>Manager</option>
+      <option>Official</option>
+      <option>Announce</option>
+    </select>
+    <label for="tape">Tape / social</label>
+    <input id="tape" name="Tape and social" placeholder="YouTube, Instagram, or a drive link"/>
+    <label for="exp">Experience</label>
+    <textarea id="exp" name="Experience" rows="4" required placeholder="Schools, promotions, years. If you are green, write that."></textarea>
+    <label for="pay">Night-of pay expectation</label>
+    <select id="pay" name="Pay expectation" required>
+      <option value="">Select one</option>
+      <option>I can work founding dates to help launch (volunteer / deferred)</option>
+      <option>I want the standard small rate (~$20 a match when the door allows)</option>
+      <option>Mix — some dates volunteer, some dates paid</option>
+      <option>I need more than the standard rate and I understand that may take me out of founding cards</option>
+    </select>
+    <label for="adv">Roster advance</label>
+    <select id="adv" name="Advance consideration" required>
+      <option value="">Select one</option>
+      <option>Yes — if invited onto the official roster, consider me for the $100 advance</option>
+      <option>No — I do not want to be considered for an advance</option>
+    </select>
+    <p class="note">The $100 roster advance is discretionary, budget-dependent, and offered only with an official roster invitation. It is never paid on demand and never paid for simply submitting this form.</p>
+    <label for="msg">Anything else</label>
+    <textarea id="msg" name="Message" rows="4" placeholder="Injuries we should know, partners, nights you cannot work."></textarea>
+    <button class="btn btn-red" type="submit">Submit application</button>
+    <p class="note">Goes to the company office. You will hear back only if we have a next step.</p>
+  </form>
+</section>
+<footer>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Applications are not bookings.</div>
+  <div><a href="roster.html" style="color:#ccc">View vacant spots</a></div>
+</footer>
+<script>
+(function(){var f=document.getElementById("apply-form");if(!f)return;var p=["jo","sh.awe","99","@gma","il.com"];f.action="https://formsubmit.co/"+p.join("");})();
+</script>
+</body>
+</html>

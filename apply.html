@@ -25,7 +25,7 @@
   <div class="coming">TALENT FILE</div>
   <h1>APPLY TO THE <em>COMPANY</em></h1>
   <div class="rule"></div>
-  <p class="lead" id="slot-banner">Fill this so we can put you on the wall if you are signed. No titles yet. You are applying as a roster member.</p>
+  <p class="lead" id="slot-banner">Work a show, join the wall, or both. Official roster is a name on the site — not a contract.</p>
 </div>
 <section id="terms" style="padding-top:0">
   <div class="callout"><strong>Compensation</strong> Standard night-of rate is approximately $20 per match when the door supports it. If a date cannot pay, we say so before you travel.</div>
@@ -37,9 +37,18 @@
     <input type="hidden" name="_captcha" value="false"/>
     <input type="text" name="_honey" style="display:none"/>
     <input type="hidden" id="clicked-slot" name="Clicked roster slot" value=""/>
-    <label for="slot">Roster number</label>
-    <select id="slot" name="Requested slot" required>
-      <option value="">Any open spot</option>
+
+    <label for="status">How do you want to work with us?</label>
+    <select id="status" name="Roster or independent" required>
+      <option value="">Select</option>
+      <option>I want to be considered for the official roster</option>
+      <option>I want to stay independent — I will work shows if booked, but I do not want my name on the official roster</option>
+    </select>
+    <p class="note">Staying independent is fine. You can still be booked. Future championships and first-look opportunities will go to official roster members first. Joining the roster is not a contract and not an exclusive. You can keep working other companies and set your own schedule. We try to book around other local independent promotions on purpose. We respect the indie calendar. We will not ask you to burn a date somewhere else to sit in our hall.</p>
+
+    <label for="slot">Roster number (if you want the wall)</label>
+    <select id="slot" name="Requested slot">
+      <option value="">Any open spot / not applying to the wall</option>
       <option>Roster Member 01</option>
       <option>Roster Member 02</option>
       <option>Roster Member 03</option>
@@ -87,8 +96,8 @@
     <label for="sig">Signature spot / trademark</label>
     <input id="sig" name="Signature" placeholder="What the crowd will remember"/>
     <label for="theme">Entrance music — song title and artist</label>
-    <input id="theme" name="Entrance music" placeholder="Song title — artist. YouTube or file link if you have one"/>
-    <p class="note">Any song is allowed in the building. We will play the music you want for your walkout. If the track is copyrighted, clips we post (YouTube, Instagram, TikTok, the site) may be muted, blocked, or claimed. That is a platform issue, not a ban on your theme. Live, it still plays.</p>
+    <input id="theme" name="Entrance music" placeholder="Song title — artist"/>
+    <p class="note">Any song is allowed in the building. We will play the music you want for your walkout. If the track is copyrighted, clips we post may be muted or claimed. Live, it still plays.</p>
     <label for="theme-link">Music link (optional)</label>
     <input id="theme-link" name="Music link" placeholder="YouTube, Spotify, or a file you can send"/>
     <label for="gear">Gear colors</label>
@@ -120,6 +129,28 @@
     <textarea id="exp" name="Experience" rows="3" required placeholder="School, promotions, years. Green is fine if you say so."></textarea>
     <label for="inj">Injuries or limits we should know</label>
     <textarea id="inj" name="Injuries" rows="2" placeholder="Concussion history, no bumps on the neck, etc."></textarea>
+
+    <label for="hardcore">Are you interested in hardcore matches?</label>
+    <select id="hardcore" name="Hardcore interest" required>
+      <option value="">Select</option>
+      <option>Yes</option>
+      <option>No — and that is fine</option>
+      <option>Maybe — depends on the spot and the opponent</option>
+    </select>
+    <label>If yes, which are you comfortable with? Check all that apply.</label>
+    <div class="checks">
+      <label><input type="checkbox" name="Hardcore weapons[]" value="Chairs"/> Chairs</label>
+      <label><input type="checkbox" name="Hardcore weapons[]" value="Tables"/> Tables</label>
+      <label><input type="checkbox" name="Hardcore weapons[]" value="Ladders"/> Ladders</label>
+      <label><input type="checkbox" name="Hardcore weapons[]" value="Trash cans"/> Trash cans</label>
+      <label><input type="checkbox" name="Hardcore weapons[]" value="Cookie sheets / stop signs"/> Cookie sheets / stop signs</label>
+      <label><input type="checkbox" name="Hardcore weapons[]" value="Bamboo"/> Bamboo</label>
+      <label><input type="checkbox" name="Hardcore weapons[]" value="None — not interested"/> None — not interested</label>
+    </div>
+    <p class="note">Saying no does not hurt your booking. This company is family-friendly extreme: theatrical, controlled, no glass, no fire, no barbed wire. Only mark what you actually want to do.</p>
+    <label for="hardcore-notes">Hardcore notes (optional)</label>
+    <input id="hardcore-notes" name="Hardcore notes" placeholder="Limits, things you will not do, things you like"/>
+
     <label for="has-merch">Do you have your own merch?</label>
     <select id="has-merch" name="Has merch" required>
       <option value="">Select</option>
@@ -140,7 +171,7 @@
       <option>No — I would need to borrow a company table if one is available</option>
       <option>Not selling merch</option>
     </select>
-    <p class="note">Sovereign Brutality takes no cut of talent merch. Your sales are yours. We want the table there because it helps you, not because we profit from it. House tables are limited and go back on the truck at the end of the night. They rotate show to show so more people get a turn. Bringing your own table is the surest way to have a spot. Venue size still decides how many tables fit. If the room is tight we will say so early, split a table, or share a surface. We will try to get everyone on the floor. We will not promise a table the building cannot hold. Teamwork on this is part of working here.</p>
+    <p class="note">Sovereign Brutality takes no cut of talent merch. House tables are limited and rotate. Your own table is the surest spot. Tight rooms mean we split tables and talk first.</p>
     <label for="pay">Night-of pay expectation</label>
     <select id="pay" name="Pay expectation" required>
       <option value="">Select one</option>
@@ -155,15 +186,15 @@
       <option>Yes — if invited onto the official roster, consider me for the $100 advance</option>
       <option>No — I do not want to be considered for an advance</option>
     </select>
-    <p class="note">The $100 advance is discretionary, budget-dependent, and only tied to an official roster invitation.</p>
+    <p class="note">The $100 advance is only for official roster invitations. Independent bookings are not eligible for an advance.</p>
     <label for="msg">Anything else</label>
     <textarea id="msg" name="Message" rows="3"></textarea>
-    <button class="btn btn-red" type="submit">Submit application for this spot</button>
+    <button class="btn btn-red" type="submit">Submit application</button>
     <p class="note">You hear back only if there is a next step.</p>
   </form>
 </section>
 <footer>
-  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Applications are not bookings. Free water at shows for talent and crew.</div>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Roster is not a contract. Free water at shows for talent and crew.</div>
   <div><a href="roster.html" style="color:#ccc">Back to the wall</a></div>
 </footer>
 <script>
@@ -184,7 +215,7 @@
       opt.value=q;opt.text=q;opt.selected=true;sel.appendChild(opt);
     }
     document.getElementById("clicked-slot").value=q;
-    document.getElementById("slot-banner").textContent="Applying for "+q+". Fill the profile so we can build your card if you are signed.";
+    document.getElementById("slot-banner").textContent="Applying for "+q+". You can still choose official roster or independent below.";
   }
 })();
 </script>

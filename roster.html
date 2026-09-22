@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Roster — Sovereign Brutality</title>
-<meta name="description" content="Sovereign Brutality official roster. Twenty spots. All vacant. Click a slot and apply."/>
+<meta name="description" content="Sovereign Brutality roster. Twenty member spots. All vacant. Click a spot and apply."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="site.css"/>
@@ -41,13 +41,13 @@
   <div class="coming">20 SPOTS • 0 NAMES</div>
   <h1>OFFICIAL <em>ROSTER</em></h1>
   <div class="rule"></div>
-  <p class="lead">This is what the wall will look like when it is full. Right now every frame is vacant on purpose. Click a spot. That slot is pre-selected on the application.</p>
+  <p class="lead">Twenty roster members. No titles yet. No assigned roles. Click an empty card to apply for that number.</p>
 </div>
 <section>
   <div class="roster-grid" id="wall"></div>
   <div class="callout">
     <strong>How this works</strong>
-    Clicking FILL THIS SPOT does not give you the slot. It opens the application with that division already marked. Names go on this wall only after a written yes from the company.
+    Clicking FILL THIS SPOT opens the application for that roster number. A click is not a signing. Names go on the wall after a written yes from the company.
   </div>
 </section>
 <footer>
@@ -57,39 +57,19 @@
 <script>
 (function(){
   var person = '<svg viewBox="0 0 64 64" fill="#d7dbe2" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="18" r="10"/><path d="M12 58c2-16 10-24 20-24s18 8 20 24"/></svg>';
-  var slots = [
-    ["01","Sovereign Champion","Championship"],
-    ["02","#1 Contender","Title picture"],
-    ["03","Main Event","Feature"],
-    ["04","Main Event","Feature"],
-    ["05","Hardcore Specialist","Extreme"],
-    ["06","Hardcore Specialist","Extreme"],
-    ["07","Tag Champion","Tag team"],
-    ["08","Tag Champion","Tag team"],
-    ["09","Tag Division","Tag team"],
-    ["10","Tag Division","Tag team"],
-    ["11","High Flyer","Singles"],
-    ["12","Technician","Singles"],
-    ["13","Powerhouse","Singles"],
-    ["14","Junior Heavyweight","Singles"],
-    ["15","Opener","Undercard"],
-    ["16","Opener","Undercard"],
-    ["17","Prospect","Undercard"],
-    ["18","Manager","Mic"],
-    ["19","Second / Valet","Mic"],
-    ["20","Wildcard","Any style"]
-  ];
   var wall = document.getElementById("wall");
-  slots.forEach(function(s){
+  for (var i = 1; i <= 20; i++) {
+    var n = (i < 10 ? "0" : "") + i;
+    var label = "Roster Member " + n;
     var a = document.createElement("a");
     a.className = "wcard";
-    a.href = "apply.html?slot=" + encodeURIComponent(s[1]);
-    a.innerHTML = '<div class="sil">'+person+'<span class="stamp">VACANT</span><span class="numtag">'+s[0]+'</span></div>'+
-      '<div class="body"><h3>'+s[1]+'</h3>'+
-      '<div class="meta"><b>Division</b> '+s[2]+'<br/><b>From</b> —<br/><b>Size</b> — / —<br/><b>Finisher</b> —</div>'+
+    a.href = "apply.html?slot=" + encodeURIComponent(label);
+    a.innerHTML = '<div class="sil">'+person+'<span class="stamp">VACANT</span><span class="numtag">'+n+'</span></div>'+
+      '<div class="body"><h3>'+label+'</h3>'+
+      '<div class="meta"><b>Name</b> —<br/><b>From</b> —<br/><b>Size</b> — / —<br/><b>Finisher</b> —</div>'+
       '<div class="fill">Fill this spot →</div></div>';
     wall.appendChild(a);
-  });
+  }
 })();
 </script>
 </body>

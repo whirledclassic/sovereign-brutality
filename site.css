@@ -1,7 +1,7 @@
 :root{--bg:#050505;--blood:#c4121a;--hot:#ff2a33;--chrome:#d7dbe2;--steel:#9aa1ab;--paper:#f3f1ec}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:radial-gradient(ellipse at 20% 0%,rgba(180,16,24,.22),transparent 42%),radial-gradient(ellipse at 80% 0%,rgba(180,16,24,.16),transparent 40%),#050505;color:var(--paper);font-family:Inter,system-ui,sans-serif;line-height:1.6;padding-top:118px}
+body{background:radial-gradient(ellipse at 20% 0%,rgba(180,16,24,.22),transparent 42%),radial-gradient(ellipse at 80% 0%,rgba(180,16,24,.16),transparent 40%),#050505;color:var(--paper);font-family:Inter,system-ui,sans-serif;line-height:1.6;padding-top:118px;padding-bottom:88px}
 .topbar{position:fixed;top:0;left:0;right:0;z-index:90;background:#000;padding:18px 0 0;border-bottom:1px solid #222}
 .mark{display:block;text-align:center;font-family:"Bebas Neue",sans-serif;letter-spacing:.18em;font-size:1.15rem;color:var(--chrome);text-decoration:none;padding:4px 16px 8px;white-space:nowrap}
 .mark b{color:var(--hot);font-weight:inherit}
@@ -58,9 +58,19 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
 .sponsor-links a{color:var(--chrome);border:1px solid #3a3a3a;text-decoration:none;font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;padding:8px 12px}
 .sponsor-links a:hover{border-color:var(--hot);color:#fff}
 .music-credit{color:#888;font-size:.78rem;margin-top:16px}
+.house-dock{position:fixed;left:18px;right:18px;bottom:22px;z-index:95;display:flex;align-items:center;gap:12px;max-width:520px;margin:0 auto;padding:10px 12px;background:#0a0a0a;border:1px solid #333;box-shadow:0 12px 40px rgba(0,0,0,.55)}
+.house-dock.on{border-color:#5a1515}
+.house-btn{font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(#e01b24,#9d0d14);color:#fff;border:0;padding:10px 16px;cursor:pointer}
+.house-dock.on .house-btn{background:#1a1a1a;border:1px solid #666}
+.house-copy{display:flex;flex-direction:column;min-width:0;flex:1}
+.house-copy strong{font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--chrome)}
+.house-copy span{font-size:.82rem;color:#bbb;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.house-buy{color:var(--hot);text-decoration:none;font-family:Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;white-space:nowrap}
+.house-yt{position:absolute;width:1px;height:1px;left:-9999px;overflow:hidden}
 @media(max-width:700px){
   section,.page-hero{padding:40px 7vw}
   body{padding-top:148px}
   .tabs,nav.tabs,nav .links{grid-template-columns:repeat(3,minmax(0,1fr))}
   .tabs a,nav .links a{font-size:.68rem;padding:11px 4px}
+  .house-dock{left:10px;right:10px;bottom:18px}
 }

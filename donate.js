@@ -7,15 +7,18 @@
 
   function openPay(amount){
     var src = BASE + (amount ? ('?amount=' + encodeURIComponent(amount)) : '');
-    if (frame.getAttribute('src') !== src) frame.setAttribute('src', src);
+    frame.setAttribute('src', src);
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
+    document.documentElement.classList.add('pay-lock');
     document.body.classList.add('pay-lock');
   }
   function closePay(){
     overlay.classList.remove('open');
     overlay.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('pay-lock');
     document.body.classList.remove('pay-lock');
+    frame.setAttribute('src', 'about:blank');
   }
 
   document.querySelectorAll('[data-give]').forEach(function(el){

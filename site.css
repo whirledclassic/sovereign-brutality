@@ -69,7 +69,7 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
 .donate-goal{font-family:Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--hot);font-size:.78rem;margin-bottom:12px}
 .donate-pay{display:block;width:100%;height:720px;border:0;background:#0b0b0b}
 .donate-box .note{margin-top:12px}
-.house-dock{position:fixed;left:18px;right:18px;bottom:22px;z-index:95;display:flex;align-items:center;gap:12px;max-width:520px;margin:0 auto;padding:10px 12px;background:#0a0a0a;border:1px solid #333;box-shadow:0 12px 40px rgba(0,0,0,.55)}
+.house-dock{position:fixed;left:18px;right:18px;bottom:calc(22px + env(safe-area-inset-bottom, 0px));z-index:95;display:flex;align-items:center;gap:12px;max-width:520px;margin:0 auto;padding:10px 12px;background:#0a0a0a;border:1px solid #333;box-shadow:0 12px 40px rgba(0,0,0,.55)}
 .house-dock.on{border-color:#5a1515}
 .house-btn{font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(#e01b24,#9d0d14);color:#fff;border:0;padding:10px 16px;cursor:pointer}
 .house-dock.on .house-btn{background:#1a1a1a;border:1px solid #666}
@@ -83,7 +83,8 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
   body{padding-top:148px;padding-bottom:120px}
   .tabs,nav.tabs,nav .links{grid-template-columns:repeat(3,minmax(0,1fr))}
   .tabs a,nav .links a{font-size:.68rem;padding:11px 4px}
-  .house-dock{left:12px;right:12px;bottom:16px}
+  .house-dock{display:flex !important;left:10px;right:10px;bottom:calc(12px + env(safe-area-inset-bottom, 0px));gap:8px;padding:8px 10px}
+  .house-btn{padding:10px 12px}
   .sponsor{padding:26px 18px}
   .sponsor-logo{padding:14px 16px}
   .sponsor-logo img{max-height:68px}

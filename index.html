@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://sovereignbrutality.com/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="site.css?v=3"/>
+<link rel="stylesheet" href="site.css?v=4"/>
 <script>
 if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.hostname)) {
   location.replace('https://' + location.host + location.pathname + location.search + location.hash);
@@ -20,16 +20,6 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
 .tag{max-width:680px;margin:0 auto 22px;color:#d5d5d5}
 .pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
 .pill{border:1px solid #3a3a3a;color:var(--chrome);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:#0008}
-.pay-overlay{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:9999;background:#050505;padding:0;align-items:stretch;justify-content:stretch}
-.pay-overlay.open{display:flex}
-.pay-sheet{width:100%;height:100%;background:#050505;border:0;display:flex;flex-direction:column}
-.pay-bar{display:flex;align-items:center;justify-content:space-between;padding:14px 16px calc(10px + env(safe-area-inset-top));background:#000;border-bottom:1px solid #2a1515;flex:0 0 auto}
-.pay-bar span{font-family:Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#d7dbe2;font-size:.78rem}
-.pay-close{border:0;background:#c4121a;color:#fff;font-family:Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;cursor:pointer}
-.pay-sheet iframe{flex:1 1 auto;width:100%;height:100%;border:0;background:#050505;min-height:0}
-html.pay-lock,body.pay-lock{overflow:hidden;height:100%}
-html.pay-lock .topbar,html.pay-lock .house-dock,html.pay-lock .wire-x,html.pay-lock .wire-y,
-body.pay-lock .topbar,body.pay-lock .house-dock,body.pay-lock .wire-x,body.pay-lock .wire-y{display:none !important}
 </style>
 </head>
 <body>
@@ -70,36 +60,21 @@ body.pay-lock .topbar,body.pay-lock .house-dock,body.pay-lock .wire-x,body.pay-l
   <p class="kicker" style="text-align:center">The ring</p>
   <h2 style="text-align:center">HELP US <em>OWN</em> THE FLOOR</h2>
   <div class="rule"></div>
-  <p class="lead">A delivered rental already quotes around a thousand dollars a night. Four or five of those nights buy a ring we keep. After that, ticket money stays in the hall, the insurance, and the talent — not a truck from out of state.</p>
+  <p class="lead">A delivered rental already quotes around a thousand dollars a night. Four or five of those nights buy a ring we keep.</p>
   <div class="donate-box">
-    <p class="donate-goal">Goal: buy the company ring</p>
+    <p class="donate-goal">Buy the company ring</p>
     <div class="donate-grid">
-      <button type="button" data-give="25">$25</button>
-      <button type="button" data-give="55">$55</button>
-      <button type="button" data-give="100">$100</button>
-      <button type="button" data-give="250">$250</button>
-      <button type="button" data-give="500">$500</button>
-      <button type="button" data-give="1000">$1,000</button>
+      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=25">$25</a>
+      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=55">$55</a>
+      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=100">$100</a>
+      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=250">$250</a>
+      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=500">$500</a>
+      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=1000">$1,000</a>
     </div>
-    <button class="btn btn-red donate-go" type="button" data-give="">Give now</button>
-    <p class="note">Checkout stays on this page. Processed by Givebutter. This is a company, not a 501(c)(3). Gifts are not tax-deductible.</p>
+    <a class="btn btn-red donate-go" href="https://givebutter.com/sovereign-brutality-owmjb9">Give now</a>
+    <p class="note">Secure checkout on Givebutter. Not a 501(c)(3). Gifts are not tax-deductible.</p>
   </div>
 </section>
-<div id="pay-overlay" class="pay-overlay" aria-hidden="true">
-  <div class="pay-sheet" role="dialog" aria-label="Donate to Sovereign Brutality">
-    <div class="pay-bar">
-      <span>Sovereign Brutality</span>
-      <button id="pay-close" class="pay-close" type="button">Close</button>
-    </div>
-    <iframe
-      id="pay-frame"
-      title="Givebutter checkout"
-      src="about:blank"
-      allow="payment *"
-      allowpaymentrequest
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</div>
 <section id="house-music">
   <p class="kicker" style="text-align:center">The sound of the room</p>
   <h2 style="text-align:center">HOUSE MUSIC BY <em>AMBERGRIS</em></h2>
@@ -156,6 +131,5 @@ body.pay-lock .topbar,body.pay-lock .house-dock,body.pay-lock .wire-x,body.pay-l
   <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling<br/><span style="color:#666">House music: <a href="https://ambergrisdoom.bandcamp.com/" style="color:#888">AMBERGRIS</a> · House film: <a href="https://www.pvdfilmmedia.com/" style="color:#888">PVD FILM & MEDIA</a></span></div>
   <div><a href="#ring" style="color:#888">Donate</a> · <a href="talent.html" style="color:#888">Talent</a> · <a href="apply.html" style="color:#888">Apply</a> · © 2026</div>
 </footer>
-<script src="donate.js?v=3"></script>
 </body>
 </html>

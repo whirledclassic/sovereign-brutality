@@ -1,12 +1,16 @@
 (function(){
   var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   if (!here || here === '/' ) here = 'index.html';
+  if (here.indexOf('.') === -1) here += '.html';
   var items = [
     ['index.html','Home'],
+    ['news.html','News'],
     ['roster.html','Roster'],
     ['events.html','Events'],
+    ['media.html','Media'],
     ['merch.html','Merch'],
     ['talent.html','Talent'],
+    ['hall-of-fame.html','Hall of Fame'],
     ['apply.html','Apply']
   ];
   var links = items.map(function(it){
@@ -15,14 +19,14 @@
   document.write(
     '<style id="sb-navfix">'+
       '.topbar{position:fixed;top:0;left:0;right:0;z-index:90;background:#000;padding:18px 0 0;border-bottom:1px solid #222}'+
-      '.topbar nav,.topbar .tabs{position:static!important;left:auto!important;right:auto!important;top:auto!important;display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));width:100%!important;max-width:none!important;padding:0!important;height:auto!important;background:transparent;border:0;border-top:1px solid #222;box-sizing:border-box}'+
+      '.topbar nav,.topbar .tabs{position:static!important;left:auto!important;right:auto!important;top:auto!important;display:grid!important;grid-template-columns:repeat(9,minmax(0,1fr));width:100%!important;max-width:none!important;padding:0!important;height:auto!important;background:transparent;border:0;border-top:1px solid #222;box-sizing:border-box}'+
       '.topbar .mark{display:block;text-align:center;font-family:"Bebas Neue",sans-serif;letter-spacing:.18em;font-size:1.15rem;color:#d7dbe2;text-decoration:none;padding:4px 16px 8px;white-space:nowrap}'+
       '.topbar .mark b{color:#ff2a33;font-weight:inherit}'+
-      '.topbar .tabs a{display:block;text-align:center;color:#d7dbe2;text-decoration:none;font-size:clamp(.62rem,1.1vw,.72rem);letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:12px 6px;border-right:1px solid #222;border-bottom:2px solid transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'+
+      '.topbar .tabs a{display:block;text-align:center;color:#d7dbe2;text-decoration:none;font-size:clamp(.6rem,.95vw,.72rem);line-height:18px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:12px 4px;border-right:1px solid #222;border-bottom:2px solid transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'+
       '.topbar .tabs a:last-child{border-right:0}'+
       '.topbar .tabs a.active,.topbar .tabs a:hover{color:#ff2a33;border-bottom-color:#ff2a33;background:#140404}'+
       'body{padding-top:118px}'+
-      '@media(max-width:700px){.topbar .tabs{grid-template-columns:repeat(3,minmax(0,1fr))!important}body{padding-top:148px}}'+
+      '@media(max-width:860px){.topbar .tabs{grid-template-columns:repeat(3,minmax(0,1fr))!important}.topbar .tabs a{font-size:.66rem;letter-spacing:.05em;padding:10px 4px}.topbar .tabs a:nth-child(3n){border-right:0}.topbar .tabs a:nth-child(-n+6){border-bottom-color:#222}.topbar .tabs a.active,.topbar .tabs a:hover{border-bottom-color:#ff2a33}body{padding-top:190px}}'+
     '</style>'+
     '<header class="topbar">'+
       '<a class="mark" href="index.html">SOVEREIGN <b>BRUTALITY</b></a>'+

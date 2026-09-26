@@ -32,5 +32,5 @@
       '<nav class="tabs">'+links+'</nav>'+
     '</header>'
   );
-  document.write('<script src="house.js"><\\/script>');
+  document.write('<script src="house.js"><\/script>');
 })();

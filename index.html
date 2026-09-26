@@ -64,27 +64,29 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
   <div class="donate-box">
     <p class="donate-goal">Goal: buy the company ring</p>
     <div class="donate-grid">
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9" target="_blank" rel="noopener">$25</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9" target="_blank" rel="noopener">$55</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9" target="_blank" rel="noopener">$100</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9" target="_blank" rel="noopener">$250</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9" target="_blank" rel="noopener">$500</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9" target="_blank" rel="noopener">$1,000</a>
+      <button type="button" data-give="25">$25</button>
+      <button type="button" data-give="55">$55</button>
+      <button type="button" data-give="100">$100</button>
+      <button type="button" data-give="250">$250</button>
+      <button type="button" data-give="500">$500</button>
+      <button type="button" data-give="1000">$1,000</button>
     </div>
-    <a class="btn btn-red donate-go" href="https://givebutter.com/sovereign-brutality-owmjb9" target="_blank" rel="noopener">Give on Givebutter</a>
-    <p class="note">This is a company, not a 501(c)(3). Gifts are not tax-deductible.</p>
+    <button class="btn btn-red donate-go" type="button" data-give="">Give now</button>
+    <p class="note">Checkout stays on this page. Processed by Givebutter. This is a company, not a 501(c)(3). Gifts are not tax-deductible.</p>
   </div>
-  <div class="donate-frame">
+</section>
+<div id="pay-overlay" class="pay-overlay" aria-hidden="true">
+  <div class="pay-sheet" role="dialog" aria-label="Donate to Sovereign Brutality">
+    <button id="pay-close" class="pay-close" type="button">Close</button>
     <iframe
-      title="Sovereign Brutality ring campaign"
-      src="https://givebutter.com/embed/c/sovereign-brutality-owmjb9"
-      name="givebutter"
-      loading="lazy"
+      id="pay-frame"
+      title="Givebutter checkout"
+      src="about:blank"
       allow="payment *"
       allowpaymentrequest
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-</section>
+</div>
 <section id="house-music">
   <p class="kicker" style="text-align:center">The sound of the room</p>
   <h2 style="text-align:center">HOUSE MUSIC BY <em>AMBERGRIS</em></h2>
@@ -141,5 +143,6 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
   <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling<br/><span style="color:#666">House music: <a href="https://ambergrisdoom.bandcamp.com/" style="color:#888">AMBERGRIS</a> · House film: <a href="https://www.pvdfilmmedia.com/" style="color:#888">PVD FILM &amp; MEDIA</a></span></div>
   <div><a href="#ring" style="color:#888">Donate</a> · <a href="talent.html" style="color:#888">Talent</a> · <a href="apply.html" style="color:#888">Apply</a> · © 2026</div>
 </footer>
+<script src="donate.js"></script>
 </body>
 </html>

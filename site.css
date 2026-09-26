@@ -90,3 +90,10 @@ footer{padding:32px 8vw 64px;display:flex;justify-content:space-between;gap:16px
   .sponsor-logo img{max-height:68px}
   .donate-pay{height:780px}
 }
+
+.sponsor-logo-dark{background:#050505;border-color:#2a2a2a}
+.sponsor-logo-dark img{max-height:168px}
+.sponsor-work{display:block;width:min(320px,86%);margin:6px auto 18px;border:1px solid #2a2a2a}
+@media(max-width:700px){
+  .sponsor-logo-dark img{max-height:140px}
+}

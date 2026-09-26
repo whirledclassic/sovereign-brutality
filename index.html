@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://sovereignbrutality.com/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="site.css?v=8"/>
+<link rel="stylesheet" href="site.css?v=9"/>
 <script>
 if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.hostname)) {
   location.replace('https://' + location.host + location.pathname + location.search + location.hash);
@@ -20,15 +20,16 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
 .tag{max-width:680px;margin:0 auto 22px;color:#d5d5d5}
 .pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
 .pill{border:1px solid #3a3a3a;color:var(--chrome);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:#0008}
-.donate-box{overflow:visible !important}
-.donate-pay{display:block !important;width:100% !important;height:760px !important;min-height:760px !important;border:0 !important;background:#0b0b0b !important}
-.donate-box .note{color:#f2f2f2 !important;font-size:.95rem !important;line-height:1.45 !important;margin-top:16px !important}
+.donate-box{overflow:visible !important;padding-bottom:8px !important}
+.donate-pay{display:block !important;width:100% !important;height:560px !important;min-height:560px !important;border:0 !important;background:#0b0b0b !important}
+.donate-box .note{color:#f2f2f2 !important;font-size:.95rem !important;line-height:1.45 !important;margin-top:10px !important}
 @media(max-width:700px){
   .wire-x,.wire-y{display:none !important}
   .house-dock{display:none !important}
-  body{padding-bottom:40px !important}
-  #ring{padding:28px 16px 56px !important}
-  .donate-box{margin:12px 0 24px;padding:16px 8px 32px}
+  body{padding-bottom:28px !important}
+  #ring{padding:24px 16px 36px !important}
+  .donate-box{margin:8px 0 12px;padding:12px 8px 12px}
+  .donate-pay{height:540px !important;min-height:540px !important}
 }
 </style>
 </head>
@@ -77,10 +78,10 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
       class="donate-pay"
       title="Give to Sovereign Brutality"
       src="https://givebutter.com/embed/c/sovereign-brutality-owmjb9"
-      style="width:100%;height:760px;min-height:760px;border:0;display:block;background:#0b0b0b"
-      height="760"
+      style="width:100%;height:540px;min-height:540px;border:0;display:block;background:#0b0b0b"
+      height="540"
       width="100%"
-      scrolling="yes"
+      scrolling="no"
       allow="payment *"
       allowpaymentrequest></iframe>
     <p class="note">Tap Continue to pay with card, PayPal, or Cash App.<br/>This is a company, not a charity. Gifts are not tax-deductible.</p>

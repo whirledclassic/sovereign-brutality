@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://sovereignbrutality.com/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="site.css?v=4"/>
+<link rel="stylesheet" href="site.css?v=5"/>
 <script>
 if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.hostname)) {
   location.replace('https://' + location.host + location.pathname + location.search + location.hash);
@@ -20,6 +20,10 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
 .tag{max-width:680px;margin:0 auto 22px;color:#d5d5d5}
 .pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
 .pill{border:1px solid #3a3a3a;color:var(--chrome);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:#0008}
+.donate-box a{color:#f3f1ec !important;text-decoration:none !important}
+.donate-grid a{display:block;padding:16px 8px;border:1px solid #3a3a3a;background:#111;color:#f3f1ec !important;font-family:Oswald,sans-serif;letter-spacing:.08em;font-size:1.15rem}
+.donate-grid a:hover{border-color:#ff2a33;background:#1a0808}
+.donate-go{display:block;width:100%;box-sizing:border-box;text-align:center;color:#fff !important}
 </style>
 </head>
 <body>
@@ -63,16 +67,14 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
   <p class="lead">A delivered rental already quotes around a thousand dollars a night. Four or five of those nights buy a ring we keep.</p>
   <div class="donate-box">
     <p class="donate-goal">Buy the company ring</p>
-    <div class="donate-grid">
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=25">$25</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=55">$55</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=100">$100</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=250">$250</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=500">$500</a>
-      <a href="https://givebutter.com/sovereign-brutality-owmjb9?amount=1000">$1,000</a>
-    </div>
-    <a class="btn btn-red donate-go" href="https://givebutter.com/sovereign-brutality-owmjb9">Give now</a>
-    <p class="note">Secure checkout on Givebutter. Not a 501(c)(3). Gifts are not tax-deductible.</p>
+    <iframe
+      class="donate-pay"
+      title="Give to Sovereign Brutality"
+      src="https://givebutter.com/embed/c/sovereign-brutality-owmjb9"
+      allow="payment *"
+      allowpaymentrequest
+      loading="lazy"></iframe>
+    <p class="note">Pay here. Card, PayPal, Cash App. Not a 501(c)(3). Gifts are not tax-deductible.</p>
   </div>
 </section>
 <section id="house-music">
@@ -103,14 +105,14 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
   <div class="sponsor sponsor-film">
     <p class="sponsor-meta">East Providence • Cinematic video production</p>
     <a class="sponsor-logo" href="https://www.pvdfilmmedia.com/" target="_blank" rel="noopener">
-      <img src="https://images.squarespace-cdn.com/content/v1/62547d63e7c7726c0c81f02f/e69ca839-98df-4c40-a19e-ed5e6cdbd419/long+logo+2.png?format=1500w" alt="PVD Film & Media logo"/>
+      <img src="https://images.squarespace-cdn.com/content/v1/62547d63e7c7726c0c81f02f/e69ca839-98df-4c40-a19e-ed5e6cdbd419/long+logo+2.png?format=1500w" alt="PVD Film &amp; Media logo"/>
     </a>
-    <div class="sponsor-name">PVD FILM & MEDIA</div>
+    <div class="sponsor-name">PVD FILM &amp; MEDIA</div>
     <p>The room needs a band. It also needs a camera.</p>
-    <p>PVD Film & Media is East Providence — brand films, event coverage, and story-driven cuts that make a local night look like it belongs on a card. When Sovereign Brutality hits a Rhode Island hall, this is the crew we want on the lens.</p>
+    <p>PVD Film &amp; Media is East Providence — brand films, event coverage, and story-driven cuts that make a local night look like it belongs on a card. When Sovereign Brutality hits a Rhode Island hall, this is the crew we want on the lens.</p>
     <p>They shoot New England like it matters. That is the standard. If you want the same work for your own shop, talk to them direct.</p>
     <div class="cta" style="margin-top:8px">
-      <a class="btn btn-red" href="https://www.pvdfilmmedia.com/" target="_blank" rel="noopener">Visit PVD Film & Media</a>
+      <a class="btn btn-red" href="https://www.pvdfilmmedia.com/" target="_blank" rel="noopener">Visit PVD Film &amp; Media</a>
       <a class="btn btn-ghost" href="https://www.pvdfilmmedia.com/chat" target="_blank" rel="noopener">Let’s Chat</a>
     </div>
     <div class="sponsor-links">
@@ -128,7 +130,7 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
   <div class="cta"><a class="btn btn-red" href="events.html">Get the date</a></div>
 </section>
 <footer>
-  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling<br/><span style="color:#666">House music: <a href="https://ambergrisdoom.bandcamp.com/" style="color:#888">AMBERGRIS</a> · House film: <a href="https://www.pvdfilmmedia.com/" style="color:#888">PVD FILM & MEDIA</a></span></div>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling<br/><span style="color:#666">House music: <a href="https://ambergrisdoom.bandcamp.com/" style="color:#888">AMBERGRIS</a> · House film: <a href="https://www.pvdfilmmedia.com/" style="color:#888">PVD FILM &amp; MEDIA</a></span></div>
   <div><a href="#ring" style="color:#888">Donate</a> · <a href="talent.html" style="color:#888">Talent</a> · <a href="apply.html" style="color:#888">Apply</a> · © 2026</div>
 </footer>
 </body>

@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <title>Sovereign Brutality — Rhode Island Pro Wrestling</title>
 <meta name="description" content="Sovereign Brutality is Rhode Island independent extreme wrestling. Family-friendly. Live events coming. Help buy the ring. House music by AMBERGRIS. House film by PVD Film & Media."/>
 <link rel="canonical" href="https://sovereignbrutality.com/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="site.css"/>
+<link rel="stylesheet" href="site.css?v=3"/>
 <script>
 if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.hostname)) {
   location.replace('https://' + location.host + location.pathname + location.search + location.hash);
@@ -20,6 +20,16 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
 .tag{max-width:680px;margin:0 auto 22px;color:#d5d5d5}
 .pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
 .pill{border:1px solid #3a3a3a;color:var(--chrome);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:#0008}
+.pay-overlay{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:9999;background:#050505;padding:0;align-items:stretch;justify-content:stretch}
+.pay-overlay.open{display:flex}
+.pay-sheet{width:100%;height:100%;background:#050505;border:0;display:flex;flex-direction:column}
+.pay-bar{display:flex;align-items:center;justify-content:space-between;padding:14px 16px calc(10px + env(safe-area-inset-top));background:#000;border-bottom:1px solid #2a1515;flex:0 0 auto}
+.pay-bar span{font-family:Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#d7dbe2;font-size:.78rem}
+.pay-close{border:0;background:#c4121a;color:#fff;font-family:Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;cursor:pointer}
+.pay-sheet iframe{flex:1 1 auto;width:100%;height:100%;border:0;background:#050505;min-height:0}
+html.pay-lock,body.pay-lock{overflow:hidden;height:100%}
+html.pay-lock .topbar,html.pay-lock .house-dock,html.pay-lock .wire-x,html.pay-lock .wire-y,
+body.pay-lock .topbar,body.pay-lock .house-dock,body.pay-lock .wire-x,body.pay-lock .wire-y{display:none !important}
 </style>
 </head>
 <body>
@@ -77,7 +87,10 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
 </section>
 <div id="pay-overlay" class="pay-overlay" aria-hidden="true">
   <div class="pay-sheet" role="dialog" aria-label="Donate to Sovereign Brutality">
-    <button id="pay-close" class="pay-close" type="button">Close</button>
+    <div class="pay-bar">
+      <span>Sovereign Brutality</span>
+      <button id="pay-close" class="pay-close" type="button">Close</button>
+    </div>
     <iframe
       id="pay-frame"
       title="Givebutter checkout"
@@ -115,14 +128,14 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
   <div class="sponsor sponsor-film">
     <p class="sponsor-meta">East Providence • Cinematic video production</p>
     <a class="sponsor-logo" href="https://www.pvdfilmmedia.com/" target="_blank" rel="noopener">
-      <img src="https://images.squarespace-cdn.com/content/v1/62547d63e7c7726c0c81f02f/e69ca839-98df-4c40-a19e-ed5e6cdbd419/long+logo+2.png?format=1500w" alt="PVD Film &amp; Media logo"/>
+      <img src="https://images.squarespace-cdn.com/content/v1/62547d63e7c7726c0c81f02f/e69ca839-98df-4c40-a19e-ed5e6cdbd419/long+logo+2.png?format=1500w" alt="PVD Film & Media logo"/>
     </a>
-    <div class="sponsor-name">PVD FILM &amp; MEDIA</div>
+    <div class="sponsor-name">PVD FILM & MEDIA</div>
     <p>The room needs a band. It also needs a camera.</p>
-    <p>PVD Film &amp; Media is East Providence — brand films, event coverage, and story-driven cuts that make a local night look like it belongs on a card. When Sovereign Brutality hits a Rhode Island hall, this is the crew we want on the lens.</p>
+    <p>PVD Film & Media is East Providence — brand films, event coverage, and story-driven cuts that make a local night look like it belongs on a card. When Sovereign Brutality hits a Rhode Island hall, this is the crew we want on the lens.</p>
     <p>They shoot New England like it matters. That is the standard. If you want the same work for your own shop, talk to them direct.</p>
     <div class="cta" style="margin-top:8px">
-      <a class="btn btn-red" href="https://www.pvdfilmmedia.com/" target="_blank" rel="noopener">Visit PVD Film &amp; Media</a>
+      <a class="btn btn-red" href="https://www.pvdfilmmedia.com/" target="_blank" rel="noopener">Visit PVD Film & Media</a>
       <a class="btn btn-ghost" href="https://www.pvdfilmmedia.com/chat" target="_blank" rel="noopener">Let’s Chat</a>
     </div>
     <div class="sponsor-links">
@@ -140,9 +153,9 @@ if (location.protocol === 'http:' && /sovereignbrutality\.com$/i.test(location.h
   <div class="cta"><a class="btn btn-red" href="events.html">Get the date</a></div>
 </section>
 <footer>
-  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling<br/><span style="color:#666">House music: <a href="https://ambergrisdoom.bandcamp.com/" style="color:#888">AMBERGRIS</a> · House film: <a href="https://www.pvdfilmmedia.com/" style="color:#888">PVD FILM &amp; MEDIA</a></span></div>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling<br/><span style="color:#666">House music: <a href="https://ambergrisdoom.bandcamp.com/" style="color:#888">AMBERGRIS</a> · House film: <a href="https://www.pvdfilmmedia.com/" style="color:#888">PVD FILM & MEDIA</a></span></div>
   <div><a href="#ring" style="color:#888">Donate</a> · <a href="talent.html" style="color:#888">Talent</a> · <a href="apply.html" style="color:#888">Apply</a> · © 2026</div>
 </footer>
-<script src="donate.js"></script>
+<script src="donate.js?v=3"></script>
 </body>
 </html>

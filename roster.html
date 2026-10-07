@@ -20,14 +20,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="site.css"/>
 <style>
-.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:28px}
-.wcard{position:relative;background:linear-gradient(180deg,#141414 0%,#080808 100%);border:1px solid #2a2a2a;min-height:340px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column}
-.wcard.filled{border-color:#3a2022}
+.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:28px;align-items:start}
+.wcard{position:relative;background:#080808;border:1px solid #2a2a2a;min-height:340px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.wcard.filled{min-height:0;border-color:#3a2022;background:#000}
 .sil{height:240px;background:radial-gradient(ellipse at 50% 80%,rgba(196,18,26,.22),transparent 55%),repeating-linear-gradient(-45deg,#101010 0 10px,#0c0c0c 10px 20px);display:grid;place-items:center;position:relative;overflow:hidden}
-.sil img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.poster{display:block;width:100%;height:auto;background:#000}
+.poster img{display:block;width:100%;height:auto;object-fit:contain;object-position:center center}
 .sil svg{width:92px;height:92px;opacity:.28}
-.stamp{position:absolute;top:12px;left:12px;border:1px solid var(--hot);color:var(--hot);font-family:Oswald,sans-serif;letter-spacing:.22em;font-size:.62rem;padding:3px 7px;background:#000c}
-.numtag{position:absolute;top:12px;right:12px;font-family:"Bebas Neue",sans-serif;color:#eee;font-size:1.1rem;text-shadow:0 1px 4px #000}
+.stamp{position:absolute;top:12px;left:12px;border:1px solid var(--hot);color:var(--hot);font-family:Oswald,sans-serif;letter-spacing:.22em;font-size:.62rem;padding:3px 7px;background:#000a}
+.numtag{position:absolute;top:12px;right:12px;font-family:"Bebas Neue",sans-serif;color:#555;font-size:1.1rem}
 .body{padding:14px 14px 16px;flex:1;display:flex;flex-direction:column}
 .body h3{font-family:Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem;color:var(--chrome);margin:0 0 6px}
 .meta{font-size:.78rem;color:#8d8d8d;line-height:1.45}
@@ -56,58 +57,18 @@
 (function(){
   var person = '<svg viewBox="0 0 64 64" fill="#d7dbe2" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="18" r="10"/><path d="M12 58c2-16 10-24 20-24s18 8 20 24"/></svg>';
   var roster = [
-    {
-      name: "Johnny Motta",
-      nick: "The Brawl-Father",
-      from: "New England",
-      size: "— / —",
-      note: "Brazil colors. Veteran independent.",
-      img: "assets/roster/johnny-motta.jpg"
-    },
-    {
-      name: "Freakin Flax",
-      nick: "The Goat With The Most",
-      from: "New Hampshire",
-      size: "5'4\" / 150",
-      note: "Comedy. Death Trap Headlock.",
-      img: "assets/roster/freakin-flax.jpg"
-    },
-    {
-      name: "Mighty Mac",
-      nick: "Fight Club",
-      from: "—",
-      size: "— / —",
-      note: "Old-school hands. Black and gold.",
-      img: "assets/roster/mighty-mac.jpg"
-    },
-    {
-      name: "Tucker Remy",
-      nick: "The Purge Personified",
-      from: "New England",
-      size: "— / —",
-      note: "Face paint. The bat comes with him.",
-      img: "assets/roster/tucker-remy.jpg"
-    },
-    {
-      name: "Cowboy Willy",
-      nick: "The Cowboy",
-      from: "—",
-      size: "— / —",
-      note: "Hat. Chaps. Arms crossed.",
-      img: "assets/roster/cowboy-willy.jpg"
-    }
+    {name: "Johnny Motta", img: "assets/roster/johnny-motta.jpg"},
+    {name: "Freakin Flax", img: "assets/roster/freakin-flax.jpg"},
+    {name: "Mighty Mac", img: "assets/roster/mighty-mac.jpg"},
+    {name: "Tucker Remy", img: "assets/roster/tucker-remy.jpg"},
+    {name: "Cowboy Willy", img: "assets/roster/cowboy-willy.jpg"}
   ];
   var wall = document.getElementById("wall");
-  roster.forEach(function(w, i){
-    var n = (i < 9 ? "0" : "") + (i + 1);
-    var a = document.createElement("a");
-    a.className = "wcard filled";
-    a.href = "#";
-    a.innerHTML = '<div class="sil"><img src="'+w.img+'" alt="'+w.name+' promo"/><span class="stamp">ROSTER</span><span class="numtag">'+n+'</span></div>'+
-      '<div class="body"><h3>'+w.name+'</h3>'+
-      '<div class="meta"><b>Name</b> '+w.nick+'<br/><b>From</b> '+w.from+'<br/><b>Size</b> '+w.size+'<br/><b>Note</b> '+w.note+'</div>'+
-      '<div class="fill">On the wall</div></div>';
-    wall.appendChild(a);
+  roster.forEach(function(w){
+    var card = document.createElement("div");
+    card.className = "wcard filled";
+    card.innerHTML = '<div class="poster"><img src="'+w.img+'" alt="'+w.name+' promo card"/></div>';
+    wall.appendChild(card);
   });
   for (var i = roster.length + 1; i <= 20; i++) {
     var n = (i < 10 ? "0" : "") + i;

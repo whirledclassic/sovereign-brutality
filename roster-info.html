@@ -65,9 +65,11 @@
 
 <section style="padding-top:0">
   <form id="roster-info-form" method="POST">
-    <input type="hidden" name="_subject" value="Sovereign Brutality — Roster Info Update"/>
+    <!-- Distinctive subject so these are easy to find/filter in Gmail -->
+    <input type="hidden" name="_subject" id="email-subject" value="[SB ROSTER] New roster info submission"/>
     <input type="hidden" name="_template" value="table"/>
     <input type="hidden" name="_captcha" value="false"/>
+    <input type="hidden" name="_replyto" value="" id="replyto-field"/>
     <input type="text" name="_honey" style="display:none"/>
 
     <!-- RING IDENTITY -->
@@ -222,9 +224,29 @@
 (function(){
   var f = document.getElementById("roster-info-form");
   if (!f) return;
+
   // Same pattern as apply.html — sends to josh.awe99@gmail.com via FormSubmit
   var p = ["jo","sh.awe","99","@gma","il.com"];
   f.action = "https://formsubmit.co/" + p.join("");
+
+  // Before submit: put the ring name in the subject so it's easy to scan in Gmail
+  f.addEventListener("submit", function () {
+    var name = (document.getElementById("ring_name").value || "").trim();
+    var subjectField = document.getElementById("email-subject");
+    var replyto = document.getElementById("replyto-field");
+    var email = (document.getElementById("email").value || "").trim();
+
+    if (name) {
+      subjectField.value = "[SB ROSTER] " + name + " — roster info";
+    } else {
+      subjectField.value = "[SB ROSTER] New roster info submission";
+    }
+
+    // So you can reply directly to the wrestler
+    if (email) {
+      replyto.value = email;
+    }
+  });
 })();
 </script>
 </body>

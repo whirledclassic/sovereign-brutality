@@ -6,15 +6,15 @@
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Sovereign Brutality"/>
 <meta property="og:title" content="Roster — Sovereign Brutality"/>
-<meta property="og:description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, and where else they work."/>
+<meta property="og:description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, merch, and where else they work."/>
 <meta property="og:url" content="https://sovereignbrutality.com/roster.html"/>
 <meta property="og:image" content="https://i.imgur.com/o3dZ4jI.jpeg"/>
 <meta property="og:image:type" content="image/jpeg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Roster — Sovereign Brutality"/>
-<meta name="twitter:description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, and where else they work."/>
+<meta name="twitter:description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, merch, and where else they work."/>
 <meta name="twitter:image" content="https://i.imgur.com/o3dZ4jI.jpeg"/>
-<meta name="description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, and where else they work."/>
+<meta name="description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, merch, and where else they work."/>
 <title>Roster — Sovereign Brutality</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -179,6 +179,15 @@
   color: #fff;
   background: #1a0808;
 }
+.socials a.merch {
+  border-color: #5a1515;
+  color: var(--hot);
+}
+.socials a.merch:hover {
+  background: #2a0a0a;
+  border-color: var(--hot);
+  color: #fff;
+}
 
 .fill {
   margin-top: auto;
@@ -212,7 +221,7 @@
   <h1>OFFICIAL <em>ROSTER</em></h1>
   <div class="rule"></div>
   <p class="lead">The founding wall. Seven names are up. Thirteen spots are still open. No titles yet.</p>
-  <p class="roster-note">Tap a card for socials and other promotions. Help the talent by following them and catching their other shows.</p>
+  <p class="roster-note">Socials, other promotions, and merch links when talent shares them. Support the wrestlers.</p>
 </div>
 
 <section>
@@ -251,7 +260,9 @@
         // facebook: "",
         // youtube: "",
         // web: ""
-      }
+      },
+      merch: "",              // main merch store URL
+      merchExtra: []          // optional extra merch links, e.g. ["Shirts – https://..."]
     },
     {
       name: "Freakin Flax",
@@ -265,7 +276,9 @@
       bio: "",
       companies: [],
       upcoming: [],
-      socials: {}
+      socials: {},
+      merch: "",
+      merchExtra: []
     },
     {
       name: "Mighty Mac",
@@ -279,7 +292,9 @@
       bio: "",
       companies: [],
       upcoming: [],
-      socials: {}
+      socials: {},
+      merch: "",
+      merchExtra: []
     },
     {
       name: "Tucker Remy",
@@ -293,7 +308,9 @@
       bio: "",
       companies: [],
       upcoming: [],
-      socials: {}
+      socials: {},
+      merch: "",
+      merchExtra: []
     },
     {
       name: "Cowboy Willy",
@@ -307,7 +324,9 @@
       bio: "",
       companies: [],
       upcoming: [],
-      socials: {}
+      socials: {},
+      merch: "",
+      merchExtra: []
     },
     {
       name: "Richie Rich",
@@ -321,7 +340,9 @@
       bio: "",
       companies: [],
       upcoming: [],
-      socials: {}
+      socials: {},
+      merch: "",
+      merchExtra: []
     },
     {
       name: "Bajan Ras",
@@ -335,7 +356,9 @@
       bio: "",
       companies: [],
       upcoming: [],
-      socials: {}
+      socials: {},
+      merch: "",
+      merchExtra: []
     }
   ];
 
@@ -357,16 +380,26 @@
     return map[key] || key;
   }
 
-  function buildSocials(s) {
-    if (!s || Object.keys(s).length === 0) return "";
+  function buildSocials(s, merch) {
     var html = '<div class="socials">';
-    ["x", "ig", "tiktok", "facebook", "youtube", "web"].forEach(function (k) {
-      if (s[k]) {
-        html += '<a href="' + s[k] + '" target="_blank" rel="noopener">' + socialLabel(k) + '</a>';
-      }
-    });
+    var hasAny = false;
+
+    if (s) {
+      ["x", "ig", "tiktok", "facebook", "youtube", "web"].forEach(function (k) {
+        if (s[k]) {
+          html += '<a href="' + s[k] + '" target="_blank" rel="noopener">' + socialLabel(k) + '</a>';
+          hasAny = true;
+        }
+      });
+    }
+
+    if (merch) {
+      html += '<a class="merch" href="' + merch + '" target="_blank" rel="noopener">Merch</a>';
+      hasAny = true;
+    }
+
     html += "</div>";
-    return html;
+    return hasAny ? html : "";
   }
 
   function buildMeta(w) {
@@ -405,7 +438,7 @@
       html += '<div class="bookings"><strong>Upcoming</strong>' + w.upcoming.join("<br/>") + '</div>';
     }
 
-    html += buildSocials(w.socials);
+    html += buildSocials(w.socials, w.merch);
 
     html += '</div>';
     card.innerHTML = html;

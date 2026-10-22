@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex, nofollow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Sovereign Brutality"/>
+<meta property="og:title" content="Roster Info — Sovereign Brutality"/>
+<meta property="og:description" content="Submit your roster details, other companies, and social links so fans can find you at other shows."/>
+<meta property="og:url" content="https://sovereignbrutality.com/roster-info.html"/>
+<meta name="description" content="Sovereign Brutality wrestler roster information form. For current talent only."/>
+<title>Roster Info — Sovereign Brutality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="site.css"/>
+<style>
+  /* Small extras for this form page */
+  .section-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.45rem;
+    letter-spacing: .06em;
+    color: var(--hot);
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 8px;
+    margin: 32px 0 16px;
+  }
+  .section-title:first-of-type { margin-top: 8px; }
+  .field-row { display: grid; gap: 12px; }
+  @media (min-width: 560px) {
+    .field-row.two { grid-template-columns: 1fr 1fr; }
+  }
+  .social-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+  @media (max-width: 500px) {
+    .social-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+  .social-label {
+    font-size: .78rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--chrome);
+    font-family: Oswald, sans-serif;
+  }
+</style>
+</head>
+<body>
+<div class="wire-x t"></div><div class="wire-x b"></div>
+<div class="wire-y l"></div><div class="wire-y r"></div>
+<script src="nav.js"></script>
+
+<div class="page-hero">
+  <div class="coming">TALENT ONLY</div>
+  <h1>ROSTER <em>INFO</em></h1>
+  <div class="rule"></div>
+  <p class="lead">
+    Fill this out so we can build your official roster page.<br/>
+    Fans will use it to find you at <strong>other promotions</strong> and support your work outside Sovereign Brutality.
+  </p>
+</div>
+
+<section style="padding-top:0">
+  <form id="roster-info-form" method="POST">
+    <input type="hidden" name="_subject" value="Sovereign Brutality — Roster Info Update"/>
+    <input type="hidden" name="_template" value="table"/>
+    <input type="hidden" name="_captcha" value="false"/>
+    <input type="text" name="_honey" style="display:none"/>
+
+    <!-- RING IDENTITY -->
+    <div class="section-title">Ring Identity</div>
+
+    <label for="ring_name">Ring Name *</label>
+    <input id="ring_name" name="Ring Name" required placeholder="How you appear on cards"/>
+
+    <div class="field-row two">
+      <div>
+        <label for="real_name">Legal / Real Name (optional – kept private)</label>
+        <input id="real_name" name="Legal Name" placeholder="For internal use only"/>
+      </div>
+      <div>
+        <label for="pronouns">Pronouns</label>
+        <input id="pronouns" name="Pronouns" placeholder="he/him, she/her, they/them…"/>
+      </div>
+    </div>
+
+    <div class="field-row two">
+      <div>
+        <label for="hometown">Hometown / Billed From</label>
+        <input id="hometown" name="Hometown" placeholder="City, State or Country"/>
+      </div>
+      <div>
+        <label for="alignment">Alignment</label>
+        <select id="alignment" name="Alignment">
+          <option value="">— Select —</option>
+          <option>Face</option>
+          <option>Heel</option>
+          <option>Tween / Neutral</option>
+          <option>Varies by promotion</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- STATS & STYLE -->
+    <div class="section-title">Stats & Style</div>
+
+    <div class="field-row two">
+      <div>
+        <label for="height">Height</label>
+        <input id="height" name="Height" placeholder="e.g. 6'2" or 188 cm"/>
+      </div>
+      <div>
+        <label for="weight">Weight</label>
+        <input id="weight" name="Weight" placeholder="e.g. 220 lbs or 100 kg"/>
+      </div>
+    </div>
+
+    <label for="style">Wrestling Style / Archetype</label>
+    <input id="style" name="Style" placeholder="High-flyer, brawler, technician, hardcore, powerhouse…"/>
+
+    <label for="finisher">Finisher(s) / Signature Moves</label>
+    <input id="finisher" name="Finisher" placeholder="Primary finisher and 1–2 signatures"/>
+
+    <label for="bio">Short Bio / Character Notes (fans will see this)</label>
+    <textarea id="bio" name="Bio" rows="4" placeholder="2–4 sentences that capture who you are in the ring and why fans should follow you."></textarea>
+
+    <!-- OTHER COMPANIES -->
+    <div class="section-title">Other Companies & Appearances</div>
+
+    <label for="other_companies">Promotions You Currently Work For *</label>
+    <textarea id="other_companies" name="Other Companies" rows="3" required placeholder="List every active promotion (Limitless, Beyond, Combat Zone, GCW, local Northeast feds…). Separate with commas or new lines."></textarea>
+    <p class="note">This is the most important field for fans who want to catch you at other shows.</p>
+
+    <label for="upcoming">Upcoming Bookings Outside SB (optional but very helpful)</label>
+    <textarea id="upcoming" name="Upcoming Bookings" rows="3" placeholder="Date – Promotion – City (e.g. Nov 8 – Limitless Wrestling – Worcester, MA)"></textarea>
+
+    <label for="past_notable">Notable Past Appearances / Titles</label>
+    <textarea id="past_notable" name="Notable Appearances" rows="3" placeholder="Titles held, big matches, or promotions worth highlighting"></textarea>
+
+    <!-- SOCIALS -->
+    <div class="section-title">Social Media & Links</div>
+    <p class="note" style="margin-bottom:12px">Add full URLs or just the handle. Leave blank if you don’t use that platform.</p>
+
+    <div class="social-row">
+      <span class="social-label">X / Twitter</span>
+      <input name="X / Twitter" placeholder="https://x.com/yourhandle or @yourhandle"/>
+    </div>
+    <div class="social-row">
+      <span class="social-label">Instagram</span>
+      <input name="Instagram" placeholder="https://instagram.com/yourhandle"/>
+    </div>
+    <div class="social-row">
+      <span class="social-label">TikTok</span>
+      <input name="TikTok" placeholder="https://tiktok.com/@yourhandle"/>
+    </div>
+    <div class="social-row">
+      <span class="social-label">Facebook</span>
+      <input name="Facebook" placeholder="Page or personal profile URL"/>
+    </div>
+    <div class="social-row">
+      <span class="social-label">YouTube</span>
+      <input name="YouTube" placeholder="Channel URL"/>
+    </div>
+    <div class="social-row">
+      <span class="social-label">Website / Linktree</span>
+      <input name="Website / Linktree" placeholder="https://…"/>
+    </div>
+    <div class="social-row">
+      <span class="social-label">Other</span>
+      <input name="Other Link" placeholder="Any other important link"/>
+    </div>
+
+    <!-- CONTACT & MEDIA -->
+    <div class="section-title">Contact & Media</div>
+
+    <div class="field-row two">
+      <div>
+        <label for="email">Best Email *</label>
+        <input id="email" name="Email" type="email" required placeholder="you@email.com"/>
+      </div>
+      <div>
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="Phone" type="tel" placeholder="For booking coordination only"/>
+      </div>
+    </div>
+
+    <label for="photo">Promo Photo URL or Upload Note</label>
+    <input id="photo" name="Photo" placeholder="Link to high-res headshot / full body, or note that you’ll email one"/>
+    <p class="note">Preferred: clear, high-resolution image. We can also take new shots at shows.</p>
+
+    <label for="entrance">Entrance Theme / Notes</label>
+    <input id="entrance" name="Entrance Theme" placeholder="Song title + artist, or any special entrance requests"/>
+
+    <!-- PREFERENCES -->
+    <div class="section-title">Preferences</div>
+
+    <label>What should fans be able to do from your roster page?</label>
+    <div class="checks">
+      <label><input type="checkbox" name="Preferences[]" value="Follow all socials" checked/> Follow all socials</label>
+      <label><input type="checkbox" name="Preferences[]" value="See other promotions & dates" checked/> See other promotions & dates</label>
+      <label><input type="checkbox" name="Preferences[]" value="Link to merch / Linktree"/> Link to merch / Linktree</label>
+      <label><input type="checkbox" name="Preferences[]" value="Contact for bookings (public)"/> Contact for bookings (public)</label>
+    </div>
+
+    <label for="notes">Anything else we should know?</label>
+    <textarea id="notes" name="Additional Notes" rows="3" placeholder="Travel radius, hard limits, preferred opponents, gimmick restrictions, etc."></textarea>
+
+    <button class="btn btn-red" type="submit" style="margin-top:20px">Submit Roster Info</button>
+    <p class="note">Information marked private stays internal. Public fields will appear on your official Sovereign Brutality roster page so fans can support you across the indies.</p>
+  </form>
+</section>
+
+<footer>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Hidden talent page — not linked in the main menu.</div>
+  <div><a href="index.html" style="color:#ccc">Home</a> · <a href="roster.html" style="color:#ccc">Roster</a></div>
+</footer>
+
+<script>
+(function(){
+  var f = document.getElementById("roster-info-form");
+  if (!f) return;
+  // Same pattern as apply.html — sends to josh.awe99@gmail.com via FormSubmit
+  var p = ["jo","sh.awe","99","@gma","il.com"];
+  f.action = "https://formsubmit.co/" + p.join("");
+})();
+</script>
+</body>
+</html>

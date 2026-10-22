@@ -6,81 +6,425 @@
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Sovereign Brutality"/>
 <meta property="og:title" content="Roster — Sovereign Brutality"/>
-<meta property="og:description" content="Official Sovereign Brutality roster. Johnny Motta, Freakin Flax, Mighty Mac, Tucker Remy, Cowboy Willy, Richie Rich, Bajan Ras."/>
+<meta property="og:description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, and where else they work."/>
 <meta property="og:url" content="https://sovereignbrutality.com/roster.html"/>
 <meta property="og:image" content="https://i.imgur.com/o3dZ4jI.jpeg"/>
 <meta property="og:image:type" content="image/jpeg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Roster — Sovereign Brutality"/>
-<meta name="twitter:description" content="Official Sovereign Brutality roster. Johnny Motta, Freakin Flax, Mighty Mac, Tucker Remy, Cowboy Willy, Richie Rich, Bajan Ras."/>
+<meta name="twitter:description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, and where else they work."/>
 <meta name="twitter:image" content="https://i.imgur.com/o3dZ4jI.jpeg"/>
-<meta name="description" content="Official Sovereign Brutality roster. Johnny Motta, Freakin Flax, Mighty Mac, Tucker Remy, Cowboy Willy, Richie Rich, Bajan Ras."/>
+<meta name="description" content="Official Sovereign Brutality roster. Find wrestlers, their socials, and where else they work."/>
 <title>Roster — Sovereign Brutality</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="site.css"/>
 <style>
-.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:28px;align-items:start}
-.wcard{position:relative;background:#080808;border:1px solid #2a2a2a;min-height:340px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column}
-.wcard.filled{min-height:0;border-color:#3a2022;background:#000}
-.sil{height:240px;background:radial-gradient(ellipse at 50% 80%,rgba(196,18,26,.22),transparent 55%),repeating-linear-gradient(-45deg,#101010 0 10px,#0c0c0c 10px 20px);display:grid;place-items:center;position:relative;overflow:hidden}
-.poster{display:block;width:100%;height:auto;background:#000}
-.poster img{display:block;width:100%;height:auto;object-fit:contain;object-position:center center}
-.sil svg{width:92px;height:92px;opacity:.28}
-.stamp{position:absolute;top:12px;left:12px;border:1px solid var(--hot);color:var(--hot);font-family:Oswald,sans-serif;letter-spacing:.22em;font-size:.62rem;padding:3px 7px;background:#000a}
-.numtag{position:absolute;top:12px;right:12px;font-family:"Bebas Neue",sans-serif;color:#555;font-size:1.1rem}
-.body{padding:14px 14px 16px;flex:1;display:flex;flex-direction:column}
-.body h3{font-family:Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem;color:var(--chrome);margin:0 0 6px}
-.meta{font-size:.78rem;color:#8d8d8d;line-height:1.45}
-.meta b{color:#bbb;font-weight:600}
-.fill{margin-top:auto;padding-top:12px;font-family:Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;color:var(--hot)}
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+  align-items: start;
+}
+
+/* Filled wrestler card */
+.wcard {
+  position: relative;
+  background: #080808;
+  border: 1px solid #2a2a2a;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .2s, transform .2s;
+}
+.wcard.filled {
+  border-color: #3a2022;
+  background: #000;
+}
+.wcard.filled:hover {
+  border-color: #5a1515;
+  transform: translateY(-3px);
+}
+
+.poster {
+  display: block;
+  width: 100%;
+  background: #000;
+  position: relative;
+}
+.poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+}
+
+/* Vacant slots */
+.sil {
+  height: 220px;
+  background: radial-gradient(ellipse at 50% 80%, rgba(196,18,26,.22), transparent 55%),
+              repeating-linear-gradient(-45deg, #101010 0 10px, #0c0c0c 10px 20px);
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.sil svg { width: 80px; height: 80px; opacity: .28; }
+.stamp {
+  position: absolute;
+  top: 12px; left: 12px;
+  border: 1px solid var(--hot);
+  color: var(--hot);
+  font-family: Oswald, sans-serif;
+  letter-spacing: .22em;
+  font-size: .62rem;
+  padding: 3px 7px;
+  background: #000a;
+}
+.numtag {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.body {
+  padding: 14px 14px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.body h3 {
+  font-family: Oswald, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  color: var(--chrome);
+  margin: 0;
+  line-height: 1.2;
+}
+.meta {
+  font-size: .78rem;
+  color: #8d8d8d;
+  line-height: 1.5;
+}
+.meta b { color: #bbb; font-weight: 600; }
+
+.bio {
+  font-size: .8rem;
+  color: #aaa;
+  line-height: 1.45;
+  margin-top: 2px;
+}
+
+.companies {
+  font-size: .78rem;
+  color: #c9c9c9;
+  line-height: 1.4;
+  border-left: 2px solid var(--blood);
+  padding-left: 10px;
+  margin-top: 4px;
+}
+.companies strong {
+  display: block;
+  font-family: Oswald, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .68rem;
+  color: var(--hot);
+  margin-bottom: 3px;
+}
+
+.bookings {
+  font-size: .76rem;
+  color: #9a9a9a;
+  line-height: 1.4;
+}
+.bookings strong {
+  display: block;
+  font-family: Oswald, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .65rem;
+  color: var(--chrome);
+  margin-bottom: 2px;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.socials a {
+  display: inline-block;
+  font-family: Oswald, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .65rem;
+  color: var(--chrome);
+  border: 1px solid #333;
+  padding: 4px 8px;
+  text-decoration: none;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.socials a:hover {
+  border-color: var(--hot);
+  color: #fff;
+  background: #1a0808;
+}
+
+.fill {
+  margin-top: auto;
+  padding-top: 10px;
+  font-family: Oswald, sans-serif;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-size: .68rem;
+  color: var(--hot);
+}
+
+/* Empty state note */
+.roster-note {
+  text-align: center;
+  color: #777;
+  font-size: .85rem;
+  margin-top: 8px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 </head>
 <body>
 <div class="wire-x t"></div><div class="wire-x b"></div>
 <div class="wire-y l"></div><div class="wire-y r"></div>
 <script src="nav.js"></script>
+
 <div class="page-hero">
   <div class="coming">20 SPOTS • 7 NAMES</div>
   <h1>OFFICIAL <em>ROSTER</em></h1>
   <div class="rule"></div>
   <p class="lead">The founding wall. Seven names are up. Thirteen spots are still open. No titles yet.</p>
+  <p class="roster-note">Tap a card for socials and other promotions. Help the talent by following them and catching their other shows.</p>
 </div>
+
 <section>
   <div class="roster-grid" id="wall"></div>
 </section>
+
 <footer>
   <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling</div>
   <div><a href="talent.html" style="color:#888">Talent</a> · <a href="apply.html" style="color:#888">Apply</a></div>
 </footer>
+
 <script>
-(function(){
-  var person = '<svg viewBox="0 0 64 64" fill="#d7dbe2" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="18" r="10"/><path d="M12 58c2-16 10-24 20-24s18 8 20 24"/></svg>';
+(function () {
+  /* ============================================================
+     ROSTER DATA
+     Update this array when form submissions come in.
+     Leave fields blank ("" or []) if you don't have the info yet.
+     ============================================================ */
   var roster = [
-    {name: "Johnny Motta", img: "assets/roster/johnny-motta.jpg"},
-    {name: "Freakin Flax", img: "assets/roster/freakin-flax.jpg"},
-    {name: "Mighty Mac", img: "assets/roster/mighty-mac.jpg"},
-    {name: "Tucker Remy", img: "assets/roster/tucker-remy.jpg"},
-    {name: "Cowboy Willy", img: "assets/roster/cowboy-willy.jpg"},
-    {name: "Richie Rich", img: "assets/roster/richie-rich.jpg"},
-    {name: "Bajan Ras", img: "assets/roster/chris-black.jpg"}
+    {
+      name: "Johnny Motta",
+      img: "assets/roster/johnny-motta.jpg",
+      hometown: "",
+      height: "",
+      weight: "",
+      alignment: "",
+      style: "",
+      finisher: "",
+      bio: "",
+      companies: [],          // e.g. ["Limitless", "Beyond", "GCW"]
+      upcoming: [],           // e.g. ["Nov 8 – Limitless – Worcester, MA"]
+      socials: {              // only include the ones that exist
+        // x: "https://x.com/handle",
+        // ig: "https://instagram.com/handle",
+        // tiktok: "https://tiktok.com/@handle",
+        // facebook: "",
+        // youtube: "",
+        // web: ""
+      }
+    },
+    {
+      name: "Freakin Flax",
+      img: "assets/roster/freakin-flax.jpg",
+      hometown: "",
+      height: "",
+      weight: "",
+      alignment: "",
+      style: "",
+      finisher: "",
+      bio: "",
+      companies: [],
+      upcoming: [],
+      socials: {}
+    },
+    {
+      name: "Mighty Mac",
+      img: "assets/roster/mighty-mac.jpg",
+      hometown: "",
+      height: "",
+      weight: "",
+      alignment: "",
+      style: "",
+      finisher: "",
+      bio: "",
+      companies: [],
+      upcoming: [],
+      socials: {}
+    },
+    {
+      name: "Tucker Remy",
+      img: "assets/roster/tucker-remy.jpg",
+      hometown: "",
+      height: "",
+      weight: "",
+      alignment: "",
+      style: "",
+      finisher: "",
+      bio: "",
+      companies: [],
+      upcoming: [],
+      socials: {}
+    },
+    {
+      name: "Cowboy Willy",
+      img: "assets/roster/cowboy-willy.jpg",
+      hometown: "",
+      height: "",
+      weight: "",
+      alignment: "",
+      style: "",
+      finisher: "",
+      bio: "",
+      companies: [],
+      upcoming: [],
+      socials: {}
+    },
+    {
+      name: "Richie Rich",
+      img: "assets/roster/richie-rich.jpg",
+      hometown: "",
+      height: "",
+      weight: "",
+      alignment: "",
+      style: "",
+      finisher: "",
+      bio: "",
+      companies: [],
+      upcoming: [],
+      socials: {}
+    },
+    {
+      name: "Bajan Ras",
+      img: "assets/roster/chris-black.jpg",
+      hometown: "",
+      height: "",
+      weight: "",
+      alignment: "",
+      style: "",
+      finisher: "",
+      bio: "",
+      companies: [],
+      upcoming: [],
+      socials: {}
+    }
   ];
+
+  /* ============================================================
+     RENDER
+     ============================================================ */
+  var person = '<svg viewBox="0 0 64 64" fill="#d7dbe2" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="18" r="10"/><path d="M12 58c2-16 10-24 20-24s18 8 20 24"/></svg>';
   var wall = document.getElementById("wall");
-  roster.forEach(function(w){
+
+  function socialLabel(key) {
+    var map = {
+      x: "X",
+      ig: "IG",
+      tiktok: "TikTok",
+      facebook: "FB",
+      youtube: "YT",
+      web: "Web"
+    };
+    return map[key] || key;
+  }
+
+  function buildSocials(s) {
+    if (!s || Object.keys(s).length === 0) return "";
+    var html = '<div class="socials">';
+    ["x", "ig", "tiktok", "facebook", "youtube", "web"].forEach(function (k) {
+      if (s[k]) {
+        html += '<a href="' + s[k] + '" target="_blank" rel="noopener">' + socialLabel(k) + '</a>';
+      }
+    });
+    html += "</div>";
+    return html;
+  }
+
+  function buildMeta(w) {
+    var parts = [];
+    if (w.hometown) parts.push("<b>From</b> " + w.hometown);
+    if (w.height || w.weight) {
+      var size = [w.height, w.weight].filter(Boolean).join(" / ");
+      parts.push("<b>Size</b> " + size);
+    }
+    if (w.alignment) parts.push("<b>Align</b> " + w.alignment);
+    if (w.style) parts.push("<b>Style</b> " + w.style);
+    if (w.finisher) parts.push("<b>Finisher</b> " + w.finisher);
+    if (parts.length === 0) return "";
+    return '<div class="meta">' + parts.join("<br/>") + "</div>";
+  }
+
+  roster.forEach(function (w) {
     var card = document.createElement("div");
     card.className = "wcard filled";
-    card.innerHTML = '<div class="poster"><img src="'+w.img+'" alt="'+w.name+' promo card"/></div>';
+
+    var html = '<div class="poster"><img src="' + w.img + '" alt="' + w.name + ' promo card" loading="lazy"/></div>';
+    html += '<div class="body">';
+    html += '<h3>' + w.name + '</h3>';
+
+    html += buildMeta(w);
+
+    if (w.bio) {
+      html += '<div class="bio">' + w.bio + '</div>';
+    }
+
+    if (w.companies && w.companies.length) {
+      html += '<div class="companies"><strong>Also works</strong>' + w.companies.join(" · ") + '</div>';
+    }
+
+    if (w.upcoming && w.upcoming.length) {
+      html += '<div class="bookings"><strong>Upcoming</strong>' + w.upcoming.join("<br/>") + '</div>';
+    }
+
+    html += buildSocials(w.socials);
+
+    html += '</div>';
+    card.innerHTML = html;
     wall.appendChild(card);
   });
+
+  // Vacant slots
   for (var i = roster.length + 1; i <= 20; i++) {
     var n = (i < 10 ? "0" : "") + i;
     var label = "Roster Member " + n;
     var a = document.createElement("a");
     a.className = "wcard";
     a.href = "apply.html?slot=" + encodeURIComponent(label);
-    a.innerHTML = '<div class="sil">'+person+'<span class="stamp">VACANT</span><span class="numtag">'+n+'</span></div>'+
-      '<div class="body"><h3>'+label+'</h3>'+
-      '<div class="meta"><b>Name</b> —<br/><b>From</b> —<br/><b>Size</b> — / —<br/><b>Finisher</b> —</div>'+
+    a.innerHTML =
+      '<div class="sil">' + person +
+      '<span class="stamp">VACANT</span>' +
+      '<span class="numtag">' + n + '</span></div>' +
+      '<div class="body"><h3>' + label + '</h3>' +
+      '<div class="meta"><b>Name</b> —<br/><b>From</b> —<br/><b>Size</b> — / —</div>' +
       '<div class="fill">Coming soon</div></div>';
     wall.appendChild(a);
   }

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex, nofollow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Sovereign Brutality"/>
+<meta property="og:title" content="T-Shirt Pre-Order — Sovereign Brutality"/>
+<meta property="og:description" content="Official Sovereign Brutality T-shirt pre-order."/>
+<meta property="og:url" content="https://sovereignbrutality.com/preorder.html"/>
+<meta property="og:image" content="https://i.imgur.com/o3dZ4jI.jpeg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="description" content="Official Sovereign Brutality T-shirt pre-order."/>
+<title>T-Shirt Pre-Order — Sovereign Brutality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="site.css"/>
+<style>
+  .price-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    justify-content: center;
+    margin: 8px 0 28px;
+    font-family: Oswald, sans-serif;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: var(--chrome);
+  }
+  .price-bar strong { color: var(--hot); }
+  .size-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 12px;
+    margin: 4px 0 8px;
+  }
+  .size-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  .size-grid input[type="number"] {
+    text-align: center;
+    -moz-appearance: textfield;
+  }
+  .size-grid input[type="number"]::-webkit-outer-spin-button,
+  .size-grid input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .totals {
+    border: 1px solid #3a1515;
+    background: #120808;
+    padding: 16px 18px;
+    margin: 8px 0 4px;
+    display: grid;
+    gap: 8px;
+  }
+  .totals .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: .95rem;
+  }
+  .totals .row strong {
+    font-family: Oswald, sans-serif;
+    letter-spacing: .06em;
+    color: var(--hot);
+    font-size: 1.15rem;
+  }
+  .delivery-options {
+    display: grid;
+    gap: 10px;
+  }
+  .delivery-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: Inter, sans-serif;
+    font-size: .95rem;
+    color: #ddd;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .delivery-options input { width: auto; }
+  #shipping-fields { display: none; }
+  #shipping-fields.visible { display: grid; gap: 12px; }
+  .pay-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  .pay-grid label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: Inter, sans-serif;
+    font-size: .92rem;
+    color: #ddd;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .pay-grid input { width: auto; }
+</style>
+</head>
+<body>
+<div class="wire-x t"></div><div class="wire-x b"></div>
+<div class="wire-y l"></div><div class="wire-y r"></div>
+<script src="nav.js"></script>
+
+<div class="page-hero">
+  <div class="coming">PRE-ORDER</div>
+  <h1>T-SHIRT <em>PRE-ORDER</em></h1>
+  <div class="rule"></div>
+  <p class="lead">Official Sovereign Brutality tee. Pre-order locks your size before we print.</p>
+</div>
+
+<section>
+  <div class="price-bar">
+    <span>Shirt <strong>$20</strong></span>
+    <span>Shipping <strong>$8</strong> / shirt</span>
+    <span>Local pickup <strong>free</strong></span>
+  </div>
+
+  <form id="preorder-form" method="POST">
+    <input type="hidden" name="_subject" value="Sovereign Brutality — T-Shirt Pre-Order"/>
+    <input type="hidden" name="_captcha" value="false"/>
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
+    <input type="hidden" name="_template" value="table"/>
+    <input type="hidden" name="_next" value="https://sovereignbrutality.com/merch.html"/>
+
+    <!-- Customer -->
+    <label for="name">Full Name</label>
+    <input id="name" name="Name" type="text" required placeholder="Your name" autocomplete="name"/>
+
+    <label for="email">Email</label>
+    <input id="email" name="Email" type="email" required placeholder="you@email.com" autocomplete="email"/>
+
+    <label for="phone">Phone</label>
+    <input id="phone" name="Phone" type="tel" placeholder="(401) 555-0123" autocomplete="tel"/>
+
+    <!-- Sizes -->
+    <label style="margin-top:8px">Quantity by Size</label>
+    <div class="size-grid">
+      <label>S<input type="number" name="Size_S" id="s" min="0" max="20" value="0" inputmode="numeric"/></label>
+      <label>M<input type="number" name="Size_M" id="m" min="0" max="20" value="0" inputmode="numeric"/></label>
+      <label>L<input type="number" name="Size_L" id="l" min="0" max="20" value="0" inputmode="numeric"/></label>
+      <label>XL<input type="number" name="Size_XL" id="xl" min="0" max="20" value="0" inputmode="numeric"/></label>
+      <label>2XL<input type="number" name="Size_2XL" id="xxl" min="0" max="20" value="0" inputmode="numeric"/></label>
+      <label>3XL<input type="number" name="Size_3XL" id="xxxl" min="0" max="20" value="0" inputmode="numeric"/></label>
+    </div>
+
+    <!-- Live totals -->
+    <div class="totals">
+      <div class="row"><span>Total shirts</span><span id="total-shirts">0</span></div>
+      <div class="row"><span>Subtotal</span><span id="subtotal">$0</span></div>
+      <div class="row"><span>Shipping</span><span id="ship-cost">$0</span></div>
+      <div class="row"><span>Amount due</span><strong id="grand-total">$0</strong></div>
+    </div>
+    <input type="hidden" name="Total_Shirts" id="hid-shirts" value="0"/>
+    <input type="hidden" name="Subtotal" id="hid-sub" value="$0"/>
+    <input type="hidden" name="Shipping_Cost" id="hid-ship" value="$0"/>
+    <input type="hidden" name="Amount_Due" id="hid-total" value="$0"/>
+
+    <!-- Delivery -->
+    <label style="margin-top:10px">Delivery</label>
+    <div class="delivery-options">
+      <label><input type="radio" name="Delivery" value="Local Pickup" id="pickup" checked/> Local pickup (Woonsocket area)</label>
+      <label><input type="radio" name="Delivery" value="Shipping" id="ship"/> Shipping (+$8 per shirt)</label>
+    </div>
+
+    <div id="shipping-fields">
+      <label for="address">Shipping Address</label>
+      <textarea id="address" name="Shipping_Address" rows="3" placeholder="Street, City, State, ZIP"></textarea>
+    </div>
+
+    <!-- Payment -->
+    <label style="margin-top:10px">Preferred Payment</label>
+    <div class="pay-grid">
+      <label><input type="radio" name="Payment" value="Cash" checked/> Cash</label>
+      <label><input type="radio" name="Payment" value="Venmo"/> Venmo</label>
+      <label><input type="radio" name="Payment" value="Cash App"/> Cash App</label>
+      <label><input type="radio" name="Payment" value="PayPal"/> PayPal</label>
+    </div>
+
+    <label for="notes">Notes (optional)</label>
+    <textarea id="notes" name="Notes" rows="2" placeholder="Anything we should know"></textarea>
+
+    <button class="btn btn-red" type="submit" id="submit-btn">Submit Pre-Order</button>
+    <p class="note">You will receive a confirmation reply with payment instructions. Pre-orders are held until the print run is complete.</p>
+  </form>
+</section>
+
+<footer>
+  <div><strong style="color:#bbb">Sovereign Brutality</strong><br/>Rhode Island independent wrestling</div>
+  <div>© 2026</div>
+</footer>
+
+<script>
+(function () {
+  var f = document.getElementById("preorder-form");
+  if (!f) return;
+
+  // Same obfuscated email pattern used on apply.html and merch.html
+  var p = ["jo", "sh.awe", "99", "@gma", "il.com"];
+  f.action = "https://formsubmit.co/" + p.join("");
+
+  var sizeIds = ["s", "m", "l", "xl", "xxl", "xxxl"];
+  var price = 20;
+  var shipPer = 8;
+
+  function qty() {
+    return sizeIds.reduce(function (sum, id) {
+      var n = parseInt(document.getElementById(id).value, 10) || 0;
+      return sum + Math.max(0, n);
+    }, 0);
+  }
+
+  function isShip() {
+    return document.getElementById("ship").checked;
+  }
+
+  function update() {
+    var t = qty();
+    var sub = t * price;
+    var ship = isShip() ? t * shipPer : 0;
+    var grand = sub + ship;
+
+    document.getElementById("total-shirts").textContent = t;
+    document.getElementById("subtotal").textContent = "$" + sub;
+    document.getElementById("ship-cost").textContent = "$" + ship;
+    document.getElementById("grand-total").textContent = "$" + grand;
+
+    document.getElementById("hid-shirts").value = t;
+    document.getElementById("hid-sub").value = "$" + sub;
+    document.getElementById("hid-ship").value = "$" + ship;
+    document.getElementById("hid-total").value = "$" + grand;
+
+    var sf = document.getElementById("shipping-fields");
+    var addr = document.getElementById("address");
+    if (isShip()) {
+      sf.classList.add("visible");
+      addr.required = true;
+    } else {
+      sf.classList.remove("visible");
+      addr.required = false;
+    }
+
+    document.getElementById("submit-btn").disabled = t < 1;
+  }
+
+  sizeIds.forEach(function (id) {
+    document.getElementById(id).addEventListener("input", update);
+  });
+  document.getElementById("pickup").addEventListener("change", update);
+  document.getElementById("ship").addEventListener("change", update);
+
+  f.addEventListener("submit", function (e) {
+    if (qty() < 1) {
+      e.preventDefault();
+      alert("Please select at least one shirt.");
+    }
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>

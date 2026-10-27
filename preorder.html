@@ -108,6 +108,8 @@
     cursor: pointer;
   }
   .pay-grid input { width: auto; }
+  #payment-handle-fields { display: none; }
+  #payment-handle-fields.visible { display: grid; gap: 12px; }
 </style>
 </head>
 <body>
@@ -184,10 +186,16 @@
     <!-- Payment -->
     <label style="margin-top:10px">Preferred Payment</label>
     <div class="pay-grid">
-      <label><input type="radio" name="Payment" value="Cash" checked/> Cash</label>
-      <label><input type="radio" name="Payment" value="Venmo"/> Venmo</label>
-      <label><input type="radio" name="Payment" value="Cash App"/> Cash App</label>
-      <label><input type="radio" name="Payment" value="PayPal"/> PayPal</label>
+      <label><input type="radio" name="Payment" value="Cash" id="pay-cash" checked/> Cash</label>
+      <label><input type="radio" name="Payment" value="Venmo" id="pay-venmo"/> Venmo</label>
+      <label><input type="radio" name="Payment" value="Cash App" id="pay-cashapp"/> Cash App</label>
+      <label><input type="radio" name="Payment" value="PayPal" id="pay-paypal"/> PayPal</label>
+    </div>
+
+    <div id="payment-handle-fields">
+      <label for="pay-handle" id="pay-handle-label">Username / Handle</label>
+      <input id="pay-handle" name="Payment_Handle" type="text" placeholder="@username or $cashtag" autocomplete="username"/>
+      <p class="note" id="pay-handle-note">We need this so we can request payment when the order is ready.</p>
     </div>
 
     <label for="notes">Notes (optional)</label>
@@ -227,6 +235,14 @@
     return document.getElementById("ship").checked;
   }
 
+  function selectedPayment() {
+    var radios = document.querySelectorAll('input[name="Payment"]');
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) return radios[i].value;
+    }
+    return "Cash";
+  }
+
   function update() {
     var t = qty();
     var sub = t * price;
@@ -243,6 +259,7 @@
     document.getElementById("hid-ship").value = "$" + ship;
     document.getElementById("hid-total").value = "$" + grand;
 
+    // Shipping address toggle
     var sf = document.getElementById("shipping-fields");
     var addr = document.getElementById("address");
     if (isShip()) {
@@ -251,6 +268,38 @@
     } else {
       sf.classList.remove("visible");
       addr.required = false;
+    }
+
+    // Payment handle toggle
+    var pay = selectedPayment();
+    var handleBox = document.getElementById("payment-handle-fields");
+    var handleInput = document.getElementById("pay-handle");
+    var handleLabel = document.getElementById("pay-handle-label");
+    var handleNote = document.getElementById("pay-handle-note");
+
+    if (pay === "Venmo") {
+      handleBox.classList.add("visible");
+      handleInput.required = true;
+      handleLabel.textContent = "Venmo Username";
+      handleInput.placeholder = "@yourvenmo";
+      handleNote.textContent = "We need your Venmo so we can request payment when the order is ready.";
+    } else if (pay === "Cash App") {
+      handleBox.classList.add("visible");
+      handleInput.required = true;
+      handleLabel.textContent = "Cash App $Cashtag";
+      handleInput.placeholder = "$yourcashtag";
+      handleNote.textContent = "We need your Cash App so we can request payment when the order is ready.";
+    } else if (pay === "PayPal") {
+      handleBox.classList.add("visible");
+      handleInput.required = true;
+      handleLabel.textContent = "PayPal Email or Username";
+      handleInput.placeholder = "you@email.com or @username";
+      handleNote.textContent = "We need your PayPal so we can request payment when the order is ready.";
+    } else {
+      // Cash
+      handleBox.classList.remove("visible");
+      handleInput.required = false;
+      handleInput.value = "";
     }
 
     document.getElementById("submit-btn").disabled = t < 1;
@@ -262,10 +311,24 @@
   document.getElementById("pickup").addEventListener("change", update);
   document.getElementById("ship").addEventListener("change", update);
 
+  // Payment radio listeners
+  document.querySelectorAll('input[name="Payment"]').forEach(function (r) {
+    r.addEventListener("change", update);
+  });
+
   f.addEventListener("submit", function (e) {
     if (qty() < 1) {
       e.preventDefault();
       alert("Please select at least one shirt.");
+      return;
+    }
+    var pay = selectedPayment();
+    if (pay !== "Cash") {
+      var handle = document.getElementById("pay-handle").value.trim();
+      if (!handle) {
+        e.preventDefault();
+        alert("Please enter your " + pay + " username/handle so we can request payment.");
+      }
     }
   });
 

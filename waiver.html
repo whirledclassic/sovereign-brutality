@@ -22,10 +22,14 @@
   .actions { margin: 18px 0 28px; }
   button, .print { background: var(--red); color:#fff; border:0; padding: 10px 16px; font-family: Arial, sans-serif; letter-spacing:.06em; text-transform:uppercase; cursor:pointer; }
   @media print {
-    body { background:#fff; color:#000; }
-    .actions, .note-web { display:none; }
-    .sub, h2 { color:#000; }
-    .wrap { padding: 0; }
+    * { color: #000 !important; background: transparent !important; }
+    body { background: #fff !important; color: #000 !important; }
+    .actions, button, .print { display: none !important; }
+    .sub, h2, .note, .line span { color: #000 !important; }
+    .sig { border-top: 1px solid #000 !important; }
+    .rule { border-bottom: 1px solid #000 !important; }
+    .wrap { padding: 0; max-width: none; }
+    a { text-decoration: none; }
   }
 </style>
 </head>

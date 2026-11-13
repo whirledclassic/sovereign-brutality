@@ -21,15 +21,65 @@
   .rule { border-bottom: 1px solid #666; display:inline-block; min-width: 280px; height: 1.2em; }
   .actions { margin: 18px 0 28px; }
   button, .print { background: var(--red); color:#fff; border:0; padding: 10px 16px; font-family: Arial, sans-serif; letter-spacing:.06em; text-transform:uppercase; cursor:pointer; }
+  @page { margin: 0.6in; }
   @media print {
-    * { color: #000 !important; background: transparent !important; }
-    body { background: #fff !important; color: #000 !important; }
-    .actions, button, .print { display: none !important; }
-    .sub, h2, .note, .line span { color: #000 !important; }
-    .sig { border-top: 1px solid #000 !important; }
+    :root { --bg:#fff !important; --ink:#000 !important; --red:#000 !important; --muted:#000 !important; }
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color: #000 !important;
+      background: #fff !important;
+      background-image: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      filter: none !important;
+      opacity: 1 !important;
+      border-color: #000 !important;
+    }
+    *::before, *::after {
+      color: #000 !important;
+      background: none !important;
+      background-image: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      filter: none !important;
+      opacity: 1 !important;
+      border-color: #000 !important;
+      content: none !important;
+    }
+    html, body {
+      background: #fff !important;
+      color: #000 !important;
+      font-size: 12pt;
+      line-height: 1.4;
+      margin: 0 !important;
+    }
+    .wrap { max-width: none !important; margin: 0 !important; padding: 0 !important; }
+    h1, h2, h3, h4, h5, h6, p, div, span, .sub, .note, .line, .line span, em, strong, b, i, a, a:link, a:visited, label, li, td, th {
+      color: #000 !important;
+      background: #fff !important;
+      background-image: none !important;
+    }
+    a, a:link, a:visited { text-decoration: none; color: #000 !important; }
+    h1 { font-size: 16pt; }
+    h2 { font-size: 12pt; color: #000 !important; }
+    .sub, .note, .line span { font-size: 11pt; color: #000 !important; }
+    .sig {
+      border-top: 1px solid #000 !important;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
     .rule { border-bottom: 1px solid #000 !important; }
-    .wrap { padding: 0; max-width: none; }
-    a { text-decoration: none; }
+    .line, .sig .line { break-inside: avoid; page-break-inside: avoid; }
+    hr, table, th, td, input, textarea, select, fieldset { border: 1px solid #000 !important; background: #fff !important; color: #000 !important; }
+    input, textarea, select { font-size: 11pt; }
+    input::placeholder, textarea::placeholder, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+      color: #000 !important;
+      opacity: 1 !important;
+    }
+    .actions, .note-web, button, .print,
+    .topbar, nav, nav.tabs, .tabs, .house-dock, #house-dock, .house-yt, #house-yt,
+    .wire-x, .wire-y { display: none !important; }
   }
 </style>
 </head>
